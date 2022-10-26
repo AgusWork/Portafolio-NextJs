@@ -1,0 +1,9 @@
+@import "../../styles/constants.scss";
+
+.main{
+	padding: 20px 20px;
+	
+	@media #{$mobile} {
+		padding: 0;
+	}
+}

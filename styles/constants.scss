@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap"); 
+
+$TitleFont: 'Roboto Slab', serif; 
+$MainFont: 'Rajdhani', sans-serif;
+
+$mobile: "only screen and (max-width : 800px)";
+$mobileS: "only screen and (max-width : 500px)";
+$mobileXs: "only screen and (max-width : 340px)";
+$desktop: "only screen and (min-width : 801px)";
+$desktopXl: "only screen and (min-width : 1300px)";
+
+$lightRed: #f9313e;
+$darkRed: #AF1B26;
+$white: #ffffff;
+$darkBlue: #263C70;
+$grey:  rgba(202, 222, 234, 0.2);
+$black: #000000;
+$blue: #085B8F;
+$lightGrey: #5F5757;
+$blackBorder: #100E0E;
+.master_container{
+    height:100%;
+    width:100%;
+    padding:2rem;
+    box-sizing:border-box;
+    color: black;
+}

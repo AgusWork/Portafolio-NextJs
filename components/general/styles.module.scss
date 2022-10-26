@@ -1,0 +1,184 @@
+@import "../../styles/constants.scss";
+
+.border {
+	display: inline-block;
+	border-bottom: solid 3px #019fb6;
+	color: #2d2d2e;
+
+	@media #{$mobile} {
+		font-size: 40px;
+		text-align: center;
+	}
+}
+
+.borderAction {
+	animation-duration: 3s;
+	animation-name: animate-border;
+}
+
+@keyframes animate-border {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+.GridContainer {
+	@media #{$mobile} {
+		padding: "none";
+	}
+}
+
+.TextName {
+	@media #{$mobile} {
+		font-size: 40px;
+		text-align: center;
+	}
+}
+.TextProf {
+	@media #{$mobile} {
+		font-size: 25px;
+		text-align: center;
+	}
+}
+.FotoPerfil {
+	border-radius: 50%;
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	@media #{$mobile} {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+.WorkContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 0;
+	background-color: #66c7e5;
+	border-radius: 20px;
+	margin:20px 0 ;
+}
+
+.aboutText {
+	padding: 30px;
+	text-align: center;
+	font-size: 30px;
+
+	@media #{$mobile} {
+		font-size: 18px;
+	}
+}
+
+.aboutData li {
+	color: black;
+	font-size: 22px;
+	margin-left: 10px;
+
+	@media #{$mobile} {
+		font-size: 15px;
+	}
+}
+.aboutData li p{
+	font-size: 18px;
+	margin-left: 10px;
+
+	@media #{$mobile} {
+		font-size: 12px;
+	}
+}
+.curriculumContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	@media #{$mobile} {
+		flex-direction: column;
+	
+	}
+}
+
+.btnCurriculum{
+		display: flex;
+		flex-direction: column;
+		
+		align-items: flex-start;
+		width: 100%;
+	
+	@media #{$mobile} {
+		display: flex;
+		flex-direction: column;
+	
+	}
+}
+.btnCurriculum button{
+	margin: 20px auto;
+	border: none;
+	padding: 10px 44px;
+	font-size: 30px;
+	position: relative;
+	background-color: #E2EAED;
+
+	
+	&::before {
+		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		content: "";
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50px;
+
+		margin-top: 20px;
+		border-radius: 50px;
+		width: 10%;
+		height: 50%;
+		background-color: white;
+		border: 2px solid black;
+	}
+
+	border-radius: 50px;
+
+
+	&:hover {
+		&::before {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			border-radius: 50px;
+			border: 2px solid black;
+		}
+	}
+
+	@media #{$mobile} {
+		font-size: 20px;
+		&::before{
+			margin-top: 10px;
+
+		}
+	}
+}
+
+.btnCurriculum button a {
+	color: #ffffff;
+	mix-blend-mode: difference;
+}
+
+.btnCurriculum h2 {
+	display: none;
+	@media #{$mobile} {
+		display: block;
+	}
+}
+
+.downloadText{
+	@media #{$mobile} {
+		display: none;
+	}
+
+}
