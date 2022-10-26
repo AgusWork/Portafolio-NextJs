@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 				image: "/bukma/BukmaHead.png",
 				category: "Freelance",
 				client: "Bukma",
-				date: "02 Marzo, 2022",
+				date: "02 Marzo,2022",
 				link: "https://bukmasrl.com.ar/",
 				duration: "3 semanas",
 				language: [
