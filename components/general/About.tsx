@@ -119,7 +119,7 @@ export const About = () => {
 								</li>
 								<li>
 									<i></i> <strong>Freelance:</strong>
-									<p>Disponible</p>
+									<p>Disponible!</p>
 								</li>
 							</ul>
 						</Col>
