@@ -1,14 +1,25 @@
+@import "../../styles/constants.scss";
+
 .Card {
-	width: "300px";
-	height: "300px";
+	width: "350px";
+	height: "250px";
 
     &:hover{
         transform: scale(1.2);
     }
+
+    @media #{$mobileS}{
+		width: 300px;
+		height: 320px;	 
+	}
+	@media #{$mobileXs}{
+		width: 250px;
+		height: 320px;	 
+	}
 }
 
 .image{
-    animation: showUpandDown 5s linear infinite;
+    animation: showUpandDown 3s linear infinite;
 }
 
 @keyframes showUpandDown {

@@ -1,8 +1,10 @@
 @import "../../styles/constants.scss";
 
 .main{
-	padding: 20px 20px;
+	padding: 40px 100px;
+	background: url("../../public/FondoGrisOsc.jpg") ;
 	
+
 	@media #{$mobile} {
 		padding: 0;
 	}

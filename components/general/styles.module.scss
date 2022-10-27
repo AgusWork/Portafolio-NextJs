@@ -182,3 +182,16 @@
 	}
 
 }
+
+.softSkillsText {
+	text-align: start;
+	font-size: 30px;
+	text-decoration: solid;
+	display: list-item;
+    list-style-type: disc;    
+    list-style-position: inside;
+
+	@media #{$mobile} {
+		font-size: 18px;
+	}
+}

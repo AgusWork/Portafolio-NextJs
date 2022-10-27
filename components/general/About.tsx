@@ -103,7 +103,7 @@ export const About = () => {
 								<li>
 									<i></i>
 									<strong>Edad:</strong>
-									<p>21 Años</p>
+									<p>22 Años</p>
 								</li>
 							</ul>
 						</Col>

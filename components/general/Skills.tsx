@@ -57,9 +57,9 @@ export const Skills: FC<Works> = () => {
                 <Grid.Container gap={4} css={{ width: "100%" }} justify="center">
                     {newData.records.map((d, idx) => (
                         <Grid
-                            xs={12}
+                            xs={6}
                             sm={6}
-                            md={6}
+                            md={4}
                             lg={3}
                             xl={3}
                             key={idx}
