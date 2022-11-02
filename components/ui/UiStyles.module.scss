@@ -1,0 +1,61 @@
+.inputDiv {
+	display: block;
+	position: relative;
+	width: calc(90%);
+	height: auto;
+	margin: 10px auto;
+	padding: 20px 10px 0px;
+}
+
+.inputDiv .inputInput {
+	display: block;
+	width: 100%;
+	border-radius: 30px;
+	border: 0;
+	padding: 10px 10px;
+	font-size: 18px;
+	height: auto;
+    transition: 0.5s;
+}
+
+.inputLbl {
+	position: absolute;
+	width: auto;
+	top: 30px;
+	left: 40px;
+	transform: scale(1);
+    transition: 0.5s ;
+    color: grey;
+}
+
+.inputInput:focus ~ .inputLbl{
+	transform: translateY(-40px);
+    color: #057edd;
+}
+.inputLblText{
+    position: absolute;
+	width: auto;
+	top: -12px;
+	left: 40px;
+	transform: scale(1);
+    transition: 0.5s ;
+    color: #057edd;
+}
+.inputInput:focus{
+    border: 2px solid #057edd;
+    transform: translateY(-5px);
+}
+
+.inputDiv svg{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    transition: 0.5s ;
+    cursor: pointer;
+}
+
+.inputInput:focus ~ svg{
+	position: absolute;
+    right: 20px;
+    top: 28px;
+}

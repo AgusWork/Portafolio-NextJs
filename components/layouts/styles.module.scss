@@ -3,7 +3,7 @@
 .main{
 	padding: 40px 100px;
 	background: url("../../public/FondoGrisOsc.jpg") ;
-	
+	overflow-x: hidden;
 
 	@media #{$mobile} {
 		padding: 0;

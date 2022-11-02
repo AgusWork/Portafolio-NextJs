@@ -1,11 +1,12 @@
 import React from "react";
 import { Row, Text, Col, Grid } from "@nextui-org/react";
+import styles from "./styles.module.scss";
 import { FlipCard } from "../ui";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
-import styles from "./styles.module.scss";
 import useSWR from "swr";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 type Works = {
 	data?: {};
@@ -18,15 +19,18 @@ const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export const Works = (props) => {
 	const { ref, inView } = useInView();
 	const { data, error } = useSWR("/api/staticdata", fetcher);
- 
+
 	if (error) return <div>Failed to load</div>;
 	//Handle the loading state
 	if (!data)
 		return (
-			<Row className={styles.WorkContainer}>
-				<Text color="black" size={30}>
-					Loading...
-				</Text>
+			<Row className={styles.WorkContainer} css={{ height: "40vh" }}>
+				<PacmanLoader
+					color={"yellow"}
+					size={50}
+					aria-label="Loading Spinner"
+					data-testid="loader"
+				/>
 			</Row>
 		);
 

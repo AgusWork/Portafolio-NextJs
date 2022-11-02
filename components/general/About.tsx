@@ -115,7 +115,7 @@ export const About = () => {
 								</li>
 								<li>
 									<i></i> <strong>Email:</strong>
-									<p>agustin.cordoba.work@gmail.com</p>
+									<p className={styles.aboutEmail}>agustin.cordoba.work@gmail.com</p>
 								</li>
 								<li>
 									<i></i> <strong>Freelance:</strong>

@@ -1,6 +1,6 @@
 import { NextPage} from "next";
 import { Layout } from "../components/layouts";
-import { Works, About, Skills, SoftSkills } from "../components/general";
+import { Works, About, Skills, SoftSkills, Contact } from "../components/general";
 
 const HomePage: NextPage = () => {
 	return (
@@ -9,6 +9,7 @@ const HomePage: NextPage = () => {
 			<About />
 			<Skills />
 			<SoftSkills/>
+			<Contact/>
 		</Layout>
 	);
 };

@@ -62,7 +62,7 @@
 	padding: 0;
 	background-color: #66c7e5;
 	border-radius: 20px;
-	margin:20px 0 ;
+	margin: 20px 0;
 }
 
 .aboutText {
@@ -84,47 +84,51 @@
 		font-size: 15px;
 	}
 }
-.aboutData li p{
+.aboutData li p {
 	font-size: 18px;
 	margin-left: 10px;
 
 	@media #{$mobile} {
 		font-size: 12px;
+		margin: 0px;
+		margin-left: -10px;
+
 	}
 }
-.curriculumContainer{
+.aboutEmail{
+	@media #{$mobile} {
+	}
+}
+.curriculumContainer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 
 	@media #{$mobile} {
 		flex-direction: column;
-	
 	}
 }
 
-.btnCurriculum{
-		display: flex;
-		flex-direction: column;
-		
-		align-items: flex-start;
-		width: 100%;
-	
+.btnCurriculum {
+	display: flex;
+	flex-direction: column;
+
+	align-items: flex-start;
+	width: 100%;
+
 	@media #{$mobile} {
 		display: flex;
 		flex-direction: column;
-	
 	}
 }
-.btnCurriculum button{
+.btnCurriculum button {
 	margin: 20px auto;
 	border: none;
 	padding: 10px 44px;
 	font-size: 30px;
 	position: relative;
-	background-color: #E2EAED;
+	background-color: #e2eaed;
 
-	
 	&::before {
 		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		content: "";
@@ -144,7 +148,6 @@
 
 	border-radius: 50px;
 
-
 	&:hover {
 		&::before {
 			width: 100%;
@@ -157,9 +160,8 @@
 
 	@media #{$mobile} {
 		font-size: 20px;
-		&::before{
+		&::before {
 			margin-top: 10px;
-
 		}
 	}
 }
@@ -176,11 +178,10 @@
 	}
 }
 
-.downloadText{
+.downloadText {
 	@media #{$mobile} {
 		display: none;
 	}
-
 }
 
 .softSkillsText {
@@ -188,10 +189,47 @@
 	font-size: 30px;
 	text-decoration: solid;
 	display: list-item;
-    list-style-type: disc;    
-    list-style-position: inside;
+	list-style-type: disc;
+	list-style-position: inside;
 
 	@media #{$mobile} {
 		font-size: 18px;
 	}
+}
+.contactContainer{
+	@media #{$mobile} {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.contactContainer div{
+	@media #{$mobile} {
+		width: 90%;
+	}
+}
+
+.contactIcon{
+	width: 100%;
+	background-color: #E2EAED;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	
+}
+.contactIcon:hover svg{
+
+	color: #1eb9e2;
+}
+.contactInput div{
+		// $$inputColor: "#fff",
+		width: 100%;
+		border-radius: 30px;
+		border: 0px;
+		height: 42px;
+
+}
+.contactInput div :focus{
+	border: 2px solid black;
+	width: 110%;
+	border-radius: 30px;
 }
