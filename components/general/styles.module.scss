@@ -197,6 +197,8 @@
 	}
 }
 .contactContainer{
+	width: 100%;
+	padding: 30px;
 	@media #{$mobile} {
 		display: flex;
 		flex-direction: column;
@@ -232,4 +234,12 @@
 	border: 2px solid black;
 	width: 110%;
 	border-radius: 30px;
+}
+
+.contactLocation{
+	@media #{$mobile} {
+		width: 100%;
+		margin: 0px;
+		margin-bottom: 20px;
+	}
 }
