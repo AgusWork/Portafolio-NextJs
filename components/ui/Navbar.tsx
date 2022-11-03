@@ -69,7 +69,7 @@ export const NavBar = () => {
 						</Scrollspy>
 					))}
 				</Navbar.Content>
-				<Navbar.Collapse isOpen={isSideMenuOpen} css={{position:"absolute", left:"0px", margin:"0"}}> 
+				<Navbar.Collapse isOpen={isSideMenuOpen} css={{position:"absolute", left:"0px", margin:"0", padding:"0px", marginLeft:"-42px", top:"26px", width:"100vw"}}> 
 					{links.map((link, idx) => (
 						<Navbar.CollapseItem key={idx} disableAnimation={true}>
 							<Link
