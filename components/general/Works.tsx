@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Row, Text, Col, Grid } from "@nextui-org/react";
 import styles from "./styles.module.scss";
 import { FlipCard } from "../ui";
@@ -16,9 +16,11 @@ const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
-export const Works = (props) => {
+export const Works = () => {
 	const { ref, inView } = useInView();
 	const { data, error } = useSWR("/api/staticdata", fetcher);
+
+
 
 	if (error) return <div>Failed to load</div>;
 	//Handle the loading state
@@ -40,7 +42,7 @@ export const Works = (props) => {
 	// }
 
 	return (
-		<Row className={styles.WorkContainer}>
+		<Row className={styles.WorkContainer} id="Proyectos">
 			<Col css={{ padding: "0" }}>
 				<Row justify="center">
 					<AnimationOnScroll

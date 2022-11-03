@@ -1,3 +1,5 @@
+@import "../../styles/constants.scss";
+
 .inputDiv {
 	display: block;
 	position: relative;
@@ -22,7 +24,7 @@
 	position: absolute;
 	width: auto;
 	top: 30px;
-	left: 40px;
+	left: 30px;
 	transform: scale(1);
     transition: 0.5s ;
     color: grey;
@@ -58,4 +60,15 @@
 	position: absolute;
     right: 20px;
     top: 28px;
+}
+.navbarLink{
+	margin-left: 30px;
+	transition: 1s;
+	@media #{$mobile} {
+		margin: 0;
+	}
+}
+.active {
+	color:#057edd;
+	font-weight: 800;
 }

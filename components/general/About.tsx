@@ -15,9 +15,10 @@ export const About = () => {
 				borderRadius: "20px",
 				marginBottom: "20px",
 			}}
+			id="Sobre Mi"
 		>
 			<Col css={{ padding: "0" }}>
-				<Row justify="center">
+				<Row justify="center" >
 					<AnimationOnScroll
 						animateIn="animate__fadeIn"
 						animateOnce={true}

@@ -29,7 +29,7 @@ export const Hero = () => {
 				/>
 			</div>
 			<Row data-aos="fade-in" align="center" justify="center">
-				<Text h1 size={70} css={{ textShadow: "1px 1px 2px black" }} className={styles.TextName} >
+				<Text h1 size={70} color="white" css={{ textShadow: "1px 1px 2px black" }} className={styles.TextName} >
 					Agustin Maria Cordoba
 				</Text>
 			</Row>
@@ -42,6 +42,7 @@ export const Hero = () => {
 					css={{ textShadow: "1px 1px 2px black" }}
 					transform="uppercase"
 					className={styles.TextProf} 
+					color="white"
 				>
 					Front End Developer, Tecnico Mecanico
 				</Text>

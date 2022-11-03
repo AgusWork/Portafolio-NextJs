@@ -15,6 +15,7 @@ export const SoftSkills = () => {
 				borderRadius: "20px",
 				marginBottom: "20px",
 			}}
+			id="Soft Skills"
 		>
 			<Col css={{ padding: "0" }}>
 				<Row justify="center">

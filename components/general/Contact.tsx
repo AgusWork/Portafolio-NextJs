@@ -7,7 +7,6 @@ import StayCurrentPortraitTwoToneIcon from "@mui/icons-material/StayCurrentPortr
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { useInView } from "react-intersection-observer";
 import { InputUI, TextArea } from "../ui";
-import ReactWhatsapp from "react-whatsapp";
 
 export const Contact = () => {
 	const { ref, inView } = useInView();
@@ -31,9 +30,9 @@ export const Contact = () => {
 	};
 
 	return (
-		<Row className={styles.WorkContainer} css={{ padding: "40px" }}>
+		<Row className={styles.WorkContainer} css={{ padding: "40px" }} id="Contacto">
 			<Col>
-				<Row justify="center">
+				<Row justify="center" >
 					<AnimationOnScroll
 						animateIn="animate__fadeIn"
 						animateOnce={true}
@@ -51,7 +50,7 @@ export const Contact = () => {
 						</Text>
 					</AnimationOnScroll>
 				</Row>
-				<Row className={styles.contactContainer} justify="center">
+				<Row className={styles.contactContainer} justify="center" align="center">
 					<Col
 						css={{
 							marginRight: "15px",
@@ -61,6 +60,10 @@ export const Contact = () => {
 							boxShadow: " 0px 0px 20px rgba(0, 0, 0, 1)",
 							borderRadius: "10px",
 							width: "90%",
+							display:"flex",
+							flexDirection:"column",
+							justifyContent:"center",
+							alignItems:"center"
 						}}
 						className={styles.contactLocation}
 					>
@@ -105,7 +108,7 @@ export const Contact = () => {
 							></iframe>
 						</Row>
 					</Col>
-					<form onSubmit={enviarDatos} style={{ width: "100%" }}>
+					<form onSubmit={enviarDatos} style={{ width: "100%", display:"flex", justifyContent:"center"}}>
 						<Col
 							css={{
 								backgroundColor: "#AAA",

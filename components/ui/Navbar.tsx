@@ -1,9 +1,19 @@
+import React, { useRef, useState } from "react";
 import { useTheme, Navbar, Row } from "@nextui-org/react";
-
-const links = ["Proyectos", "Sobre Mi", "Skills", "Contacto"];
+import styles from "./UiStyles.module.scss";
+const links = ["Proyectos", "Sobre Mi", "Skills", "Soft Skills", "Contacto"];
+import Scrollspy from "react-scrollspy";
 
 export const NavBar = () => {
 	const { theme } = useTheme();
+
+	const handleClick = (link: string) => {
+		const element = document.getElementById(link);
+		if (element) {
+			// 👇 Will scroll smoothly to the top of the next section
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 
 	return (
 		<Navbar
@@ -15,9 +25,17 @@ export const NavBar = () => {
 			isCompact
 		>
 			<Row justify="center" align="center">
-				<Navbar.Content hideIn={"xs"}>
+				<Navbar.Content>
 					{links.map((link, idx) => (
-						<Navbar.Link key={idx} href="#" css={{marginLeft:"30px"}}>{link}</Navbar.Link>
+						<Scrollspy items={[link]} currentClassName={styles.active}>
+							<Navbar.Link
+								key={idx}
+								onClick={() => handleClick(link)}
+								className={styles.navbarLink}
+							>
+								{link}
+							</Navbar.Link>
+						</Scrollspy>
 					))}
 				</Navbar.Content>
 			</Row>
