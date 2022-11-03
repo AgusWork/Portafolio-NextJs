@@ -27,7 +27,7 @@ export const NavBar = () => {
 			<Row justify="center" align="center">
 				<Navbar.Content>
 					{links.map((link, idx) => (
-						<Scrollspy items={[link]} currentClassName={styles.active}>
+						<Scrollspy items={[link]} currentClassName={styles.active} key={idx}>
 							<Navbar.Link
 								key={idx}
 								onClick={() => handleClick(link)}
