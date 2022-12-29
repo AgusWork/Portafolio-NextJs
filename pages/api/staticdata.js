@@ -53,7 +53,7 @@ export default async function handler(req, res) {
 					"/bukma/Bukma1.png",
 					"/bukma/Bukma2.png",
 					"/bukma/Bukma3.png",
-					"/bukma/Bukma4.png",
+					"/bukma/Bukma4.PNG",
 					"/bukma/Bukma5.jpg",
 				],
 			},
@@ -71,8 +71,8 @@ export default async function handler(req, res) {
 				],
 				imagenes: [
 					"/e-commerce/Mi pagina.PNG",
-					"/e-commerce/Mipagina2.PNG",
-					"/e-commerce/Mipagina3.PNG",
+					"/e-commerce/MiPagina2.PNG",
+					"/e-commerce/MiPagina3.PNG",
 				],
 			},
 			{
