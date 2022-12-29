@@ -25,9 +25,16 @@ export default async function handler(req, res) {
 					"./iconos/React.png",
 					"./iconos/Sass.png",
 				],
+				imagenes: [
+					"/qualimed/FotoQualimed0.PNG",
+					"/qualimed/FotoQualimed1.PNG",
+					"/qualimed/FotoQualimed2.PNG",
+					"/qualimed/FotoQualimed3.PNG",
+					"/qualimed/FotoQualimed4.PNG",
+				],
 			},
 			{
-				image: "/bukma/BukmaHead.png",
+				image: "/bukma/Bukma1.png",
 				category: "Freelance",
 				client: "Bukma",
 				date: "02 Marzo,2022",
@@ -42,6 +49,13 @@ export default async function handler(req, res) {
 					"./iconos/React.png",
 					"./iconos/Sass.png",
 				],
+				imagenes: [
+					"/bukma/Bukma1.png",
+					"/bukma/Bukma2.png",
+					"/bukma/Bukma3.png",
+					"/bukma/Bukma4.png",
+					"/bukma/Bukma5.jpg",
+				],
 			},
 			{
 				image: "/e-commerce/Mi pagina.PNG",
@@ -54,6 +68,11 @@ export default async function handler(req, res) {
 					"./iconos/Git.png",
 					"./iconos/Javascript.png",
 					"./iconos/Sass.png",
+				],
+				imagenes: [
+					"/e-commerce/Mi pagina.PNG",
+					"/e-commerce/Mipagina2.PNG",
+					"/e-commerce/Mipagina3.PNG",
 				],
 			},
 			{
@@ -68,6 +87,13 @@ export default async function handler(req, res) {
 					"./iconos/Notion.png",
 					"./iconos/Php.png",
 					"./iconos/Tailwind.png",
+				],
+				imagenes: [
+					"/phpLogin/Login.PNG",
+					"/phpLogin/Login2.PNG",
+					"/phpLogin/SignUp.PNG",
+					"/phpLogin/SignUp2.PNG",
+					"/phpLogin/SignUp2-2.PNG",
 				],
 			},
 		],

@@ -58,7 +58,7 @@ export const Works = () => {
 						
 						`}
 						>
-							Mis Proyectos
+							Experiencia Laboral
 						</Text>
 					</AnimationOnScroll>
 				</Row>
@@ -87,6 +87,8 @@ export const Works = () => {
 										link={d.link}
 										duration={d.duration}
 										language={d.language}
+										imagenes={d.imagenes}
+
 									/>
 								</AnimationOnScroll>
 							</Grid>

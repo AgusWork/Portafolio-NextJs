@@ -76,7 +76,6 @@ export const NavBar = () => {
 								key={idx}
 								onClick={() => {handleClick(link), HandleSideMenu(false, idx)}}
 								className={styles.navbarLink}
-								
 							>
 								{link}
 							</Link>
