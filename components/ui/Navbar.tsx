@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTheme, Navbar, Row, Link } from "@nextui-org/react";
 import styles from "./UiStyles.module.scss";
-const links = ["Proyectos", "Sobre Mi", "Skills", "Soft Skills", "Contacto"];
+const links = ["Exp. Laboral","Exp. Profesional" , "Sobre Mi", "Skills", "Soft Skills", "Contacto"];
 import Scrollspy from "react-scrollspy";
 
 export const NavBar = () => {

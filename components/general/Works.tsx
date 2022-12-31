@@ -42,7 +42,7 @@ export const Works = () => {
 	// }
 
 	return (
-		<Row className={styles.WorkContainer} id="Proyectos">
+		<Row className={styles.WorkContainer} id="Exp. Laboral">
 			<Col css={{ padding: "0" }}>
 				<Row justify="center">
 					<AnimationOnScroll
