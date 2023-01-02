@@ -78,8 +78,8 @@ export const Contact = () => {
 						</Row>
 						<Row className={styles.contactIcon} align="center">
 							<EmailTwoToneIcon sx={{ color: "#0253b4", fontSize: "45px" }} />
-							<Col>
-								<Text color="black" h3 css={{ margin: "0px" }}>
+							<Col style={{ wordWrap: "break-word", overflow:"hidden" }}>
+								<Text color="black" h3 css={{ margin: "0px"}}>
 									Email:
 								</Text>
 								<Text color="black">agustin.cordoba.work@gmail.com</Text>
@@ -125,9 +125,9 @@ export const Contact = () => {
 							<Text color="white" h3 css={{ marginLeft: "40px" }}>
 								Aqui podran mandarme cualquier consulta que deseen:
 							</Text>{" "}
-							<Row justify="center" align="center">
-								<Grid.Container gap={3}>
-									<Grid sm={12} md={6} css={{padding:"0"}}>
+							<Row justify="center" align="center" style={{width:"100%"}}>
+								<Grid.Container gap={3}  style={{width:"100%"}}>
+									<Grid sm={12} md={6} css={{padding:"0"}} style={{width:"100%"}}>
 										<InputUI
 											label="Nombre"
 											type="text"
@@ -136,7 +136,7 @@ export const Contact = () => {
 											onCambio={handleInputChange}
 										/>
 									</Grid>
-									<Grid sm={12} md={6} css={{padding:"0"}}>
+									<Grid sm={12} md={6} css={{padding:"0"}} style={{width:"100%"}}>
 										<InputUI
 											label="Email"
 											type="text"
@@ -145,7 +145,7 @@ export const Contact = () => {
 											onCambio={handleInputChange}
 										/>
 									</Grid>
-									<Grid sm={12} css={{padding:"0"}}>
+									<Grid sm={12} css={{padding:"0"} }style={{width:"100%"}}>
 										<InputUI
 											clearable
 											label="Motivo"
@@ -154,7 +154,7 @@ export const Contact = () => {
 											onCambio={handleInputChange}
 										/>
 									</Grid>
-									<Grid sm={12} css={{padding:"0"}}>
+									<Grid sm={12} css={{padding:"0"}} style={{width:"100%"}}>
 										<TextArea
 											clearable
 											label="Mensaje a enviar"
