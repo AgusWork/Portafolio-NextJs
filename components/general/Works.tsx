@@ -67,8 +67,8 @@ export const Works = () => {
 						{newData.records.map((d, idx) => (
 							<Grid
 								xs={12}
-								sm={6}
-								md={6}
+								sm={12}
+								md={12}
 								lg={6}
 								xl={4}
 								key={idx}
