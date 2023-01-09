@@ -122,7 +122,7 @@ export const Contact = () => {
 
 							}}
 						>
-							<Text color="white" h3 css={{ marginLeft: "40px" }}>
+							<Text color="white" h3 css={{textAlign:"center", margin:"4px"}}>
 								Aqui podran mandarme cualquier consulta que deseen:
 							</Text>{" "}
 							<Row justify="center" align="center" style={{width:"100%"}}>

@@ -44,7 +44,7 @@ export const Hero = () => {
 					className={styles.TextProf} 
 					color="white"
 				>
-					Front End Developer, Tecnico Mecanico
+					Desarrollador Front End, Tecnico Mecanico
 				</Text>
 			</Row>
 		</Row>

@@ -54,9 +54,8 @@ export const Projects = () => {
 							ref={ref}
 							h2
 							size={50}
-							className={`${styles.border}
-						
-						`}
+							className={`${styles.border}`}
+							style={{margin:"3px"}}
 						>
 							Experiencia Profesional
 						</Text>

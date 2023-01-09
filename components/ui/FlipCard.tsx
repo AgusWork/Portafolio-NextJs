@@ -113,29 +113,21 @@ export const FlipCard: FC<Props> = ({
 				<div className={styles.flipCardBack}>
 					<Col className={styles.innerFCB}>
 						<ul className={styles.list}>
-						{
-								(duration.length > 15) ? 
-								<li style={{marginTop:"40px"}}>
+					
+								<li>
 								<strong>Categoria:</strong>: {category}
 							</li>
-							: <li>
-									<strong>Categoria:</strong>: {category}
-						</li>
-							}
+							
 							<li>
 								<strong>Cliente</strong>: {client}
 							</li>
 							<li>
 								<strong>Fecha del Proyecto</strong>: {date}
 							</li>
-							{
-								(duration.length > 15) ? <li>
+			<li>
 								<strong>Descripcion:</strong>: {duration}
 							</li>
-							: <li>
-							<strong>Duración</strong>: {duration}
-						</li>
-							}
+							
 							<Row>
 								<li>
 									<strong>Tecnologias</strong>:{" "}
@@ -155,7 +147,7 @@ export const FlipCard: FC<Props> = ({
 								</Grid.Container>
 							</Row>
 						</ul>
-						<Row justify="space-evenly" style={{width:"100%", margin:"0", padding:"0",}}>
+						<Row justify="space-evenly" style={{width:"100%", margin:"20px 0 20px 0", padding:"0",}}>
 							
 {	link != "" &&					<Link isExternal style={{maxWidth:"150px" ,width:"150px",  height:"50px", border:"2px solid" ,borderRadius:"20px", backgroundColor:"white", justifyContent:"center"}} href={link}>Visitar</Link>
 }							<button onClick={() => openPictures()} style={{maxWidth:"150px" ,width:"150px",  height:"50px", border:"2px solid #0072F5", color:"#0072F5", borderRadius:"20px", backgroundColor:"white", justifyContent:"center"}}>Ver Fotos</button>

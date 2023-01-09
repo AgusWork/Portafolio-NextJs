@@ -33,7 +33,7 @@ export const Skills: FC<Works> = () => {
 
 	const newData: any = data;
 	return (
-        <Row className={styles.WorkContainer} id="Skills">
+        <Row className={styles.WorkContainer} id="Habilidades">
         <Col css={{ padding: "0" }}>
             <Row justify="center">
                 <AnimationOnScroll
@@ -44,13 +44,11 @@ export const Skills: FC<Works> = () => {
                     <Text
                         ref={ref}
                         h2
-                        size={50}
                         className={`${styles.border}
                     
                     `}
                     >
-                        Skills
-                    </Text>
+Habilidades                    </Text>
                 </AnimationOnScroll>
             </Row>
             <Row justify="center">

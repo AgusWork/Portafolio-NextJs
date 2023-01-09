@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTheme, Navbar, Row, Link } from "@nextui-org/react";
 import styles from "./UiStyles.module.scss";
-const links = ["Exp. Laboral","Exp. Profesional" , "Sobre Mi", "Skills", "Soft Skills", "Contacto"];
+const links = ["Exp. Laboral","Exp. Profesional" , "Sobre Mi", "Habilidades", "Habilidades blandas", "Contacto"];
 import Scrollspy from "react-scrollspy";
 
 export const NavBar = () => {
@@ -43,7 +43,8 @@ export const NavBar = () => {
 			variant="sticky"
 			isCompact
 		>
-			<Navbar.Brand>
+			<Navbar.Brand style={{background:"#019fb6", borderRadius:"100%"}}
+>
 				<Navbar.Toggle
 					aria-label="toggle navigation"
 					showIn="xs"
@@ -70,8 +71,9 @@ export const NavBar = () => {
 					))}
 				</Navbar.Content>
 				<Navbar.Collapse isOpen={isSideMenuOpen} css={{position:"absolute", left:"0px", margin:"0", padding:"0px", marginLeft:"-42px", top:"26px", width:"100vw"}}> 
-					{links.map((link, idx) => (
-						<Navbar.CollapseItem key={idx} disableAnimation={true}>
+					<div style={{marginTop: "-17px", marginLeft: "-12px"}}>
+						{links.map((link, idx) => (
+						<Navbar.CollapseItem key={idx} disableAnimation={true} className={styles.navbarHoverLink}>
 							<Link
 								key={idx}
 								onClick={() => {handleClick(link), HandleSideMenu(false, idx)}}
@@ -81,6 +83,8 @@ export const NavBar = () => {
 							</Link>
 						</Navbar.CollapseItem>
 					))}
+					</div>
+					
 				</Navbar.Collapse>
 			</Row>
 		</Navbar>

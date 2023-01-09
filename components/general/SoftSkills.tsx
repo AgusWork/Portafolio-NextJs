@@ -15,7 +15,7 @@ export const SoftSkills = () => {
 				borderRadius: "20px",
 				marginBottom: "20px",
 			}}
-			id="Soft Skills"
+			id="Habilidades blandas"
 		>
 			<Col css={{ padding: "0" }}>
 				<Row justify="center">
@@ -32,7 +32,7 @@ export const SoftSkills = () => {
 						
 						`}
 						>
-							Soft Skills
+							Habilidades blandas
 						</Text>
 					</AnimationOnScroll>
 				</Row>

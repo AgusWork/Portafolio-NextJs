@@ -32,112 +32,40 @@ export const About = () => {
 						
 						`}
 						>
-							Sobre Mi
+							Sobre Mí
 						</Text>
 					</AnimationOnScroll>
 				</Row>
 				<Row justify="center">
 					<Text className={styles.aboutText} color="black">
 						Soy un Desarrollador Front End con experiencia freelance en
-						distintos proyectos, tanto publicos como otros que no, busco
+						distintos proyectos, tanto públicos como otros que no, busco
 						acentarme en un empresa y crecer como profesional. Soy una persona
-						muy apasionado por el estudio y mi mejora constante de
-						conocimientos, dia a dia estudio para poder progresar y brindar
-						mejores servicios. Se desarrollarme muy bien en diferentes areas de
-						trabajo y tengo una excelente capacidad en la resolucion de
-						problemas. Busco continuar aprendiendo y desenvolverme mas en el
+						muy apasionada por el estudio y mi mejora constante de
+						conocimientos, día a día estudio para poder progresar y brindar
+						mejores servicios. Sé desarrollarme muy bien en diferentes áreas de
+						trabajo y tengo una excelente capacidad en la resolución de
+						problemas. Busco continuar aprendiendo y desenvolverme más en el
 						mundo de la programacion.
 					</Text>
 				</Row>
-				<Row
-					css={{
-						width: "100%",
-						display: "flex",
-						justifyContent: "space-between",
-					}}
-				>
-					<Text
-						h2
-						color="black"
-						css={{
-							marginLeft: "30px",
-							borderBottom: "3px solid grey",
-							width: "200px",
-						}}
-					>
-						{" "}
-						Mis Datos
-					</Text>
-					<Text
-						h2
-						color="black"
-						css={{
-							marginRight: "30px",
-							borderBottom: "3px solid grey",
-						}}
-						className={styles.downloadText}
-					>
-						{" "}
-						Clickear para descargar
-					</Text>
-				</Row>
-
-				<div className={styles.curriculumContainer}>
-					<Row>
-						<Col>
-							<ul className={styles.aboutData}>
-								<li>
-									<i></i>
-									<strong>Cumpleaños:</strong>
-									<p>27 Nov 1999</p>
-								</li>
-								<li>
-									<i></i>
-									<strong>Telefono:</strong>
-									<p>+54 351 7895201</p>
-								</li>
-								<li>
-									<i></i>
-									<strong>Ciudad:</strong>
-									<p>La Falda, Cordoba, Argentina</p>
-								</li>
-								<li>
-									<i></i>
-									<strong>Edad:</strong>
-									<p>22 Años</p>
-								</li>
-							</ul>
-						</Col>
-						<Col>
-							<ul className={styles.aboutData}>
-								<li>
-									<i></i> <strong>Grado:</strong>
-									<p>Jr</p>
-								</li>
-								<li>
-									<i></i> <strong>Email:</strong>
-									<p className={styles.aboutEmail}>agustin.cordoba.work@gmail.com</p>
-								</li>
-								<li>
-									<i></i> <strong>Freelance:</strong>
-									<p>Disponible!</p>
-								</li>
-							</ul>
-						</Col>
-					</Row>
+			
+					
 
 					<Col className={styles.btnCurriculum}>
 						<Text
-							h2
-							color="black"
-							css={{
-								marginLeft: "30px",
-								borderBottom: "3px solid grey",
-							}}
-						>
-							{" "}
-							Clickear para descargar
-						</Text>
+								h2
+								color="black"
+								css={{
+									margin:"auto",
+									borderBottom: "3px solid grey",
+									textAlign:"center"
+								}}
+							>
+								{" "}
+								Clickear para descargar
+							</Text>
+						
 						<button>
 							<a
 								href={"./pdf/CurriculumVitae.pdf"}
@@ -159,7 +87,6 @@ export const About = () => {
 							</a>
 						</button>
 					</Col>
-				</div>
 			</Col>
 		</Row>
 	);
