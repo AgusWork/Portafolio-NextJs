@@ -18,11 +18,11 @@ export default async function handler(req, res) {
 				duration:
 					"Buscador de Marvel y DC con una busqueda por api y una practica de proteccion de ruta por el Login",
 				language: [
-					"./iconos/Git.png",
-					"./iconos/NextJs.png",
-					"./iconos/Figma.png",
-					"./iconos/React.png",
-					"./iconos/Sass.png",
+					"/iconos/Git.png",
+					"/iconos/NextJs.png",
+					"/iconos/Figma.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png",
 				],
 				imagenes: [
 					"/practicas/MarvelDc/MarvelDc1.png",
@@ -39,11 +39,11 @@ export default async function handler(req, res) {
 				duration:
 					"App de boliche con carrito en donde sus datos se guardan en local host, practica de scrum",
 				language: [
-					"./iconos/Git.png",
-					"./iconos/NextJs.png",
-					"./iconos/Figma.png",
-					"./iconos/React.png",
-					"./iconos/Sass.png",
+					"/iconos/Git.png",
+					"/iconos/NextJs.png",
+					"/iconos/Figma.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png",
 				],
 				imagenes: [
 					"/practicas/Bar/Bar1.png",
@@ -60,11 +60,11 @@ export default async function handler(req, res) {
 				duration:
 					"Aplicacion de pokemons en donde se traen los pokemons de la pokeapi y se pueden guardar en otra pantalla los que considere como favoritos.",
 				language: [
-					"./iconos/Git.png",
-					"./iconos/NextJs.png",
-					"./iconos/Figma.png",
-					"./iconos/React.png",
-					"./iconos/Sass.png",
+					"/iconos/Git.png",
+					"/iconos/NextJs.png",
+					"/iconos/Figma.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png",
 				],
 				imagenes: [
 					"/practicas/Pokemon/Pokemon1.png",
@@ -82,10 +82,10 @@ export default async function handler(req, res) {
 				duration:
 					"App para buscar cualquier tipo de Gif que trae desde una api, search + api",
 				language: [
-					"./iconos/Git.png",
-					"./iconos/Figma.png",
-					"./iconos/React.png",
-					"./iconos/Sass.png",
+					"/iconos/Git.png",
+					"/iconos/Figma.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png",
 				],
 				imagenes: [
 					"/practicas/GifApp/Gif1.png",
@@ -102,14 +102,14 @@ export default async function handler(req, res) {
 				duration:
 					"App de Organizacion de entradas, metodologia scrum, ademas se puede arrastrar y cambiar de estado de la entrada",
 				language: [
-					"./iconos/Git.png",
-					"./iconos/NextJs.png",
-					"./iconos/Figma.png",
-					"./iconos/React.png",
-					"./iconos/Sass.png",
-					"./iconos/MongoDB.png",
-					"./iconos/Docker.png",
-					"./iconos/Node.png",
+					"/iconos/Git.png",
+					"/iconos/NextJs.png",
+					"/iconos/Figma.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png",
+					"/iconos/MongoDB.png",
+					"/iconos/Docker.png",
+					"/iconos/Node.png",
 				],
 				imagenes: [
 					"/practicas/OpenJira/Open1.png",
