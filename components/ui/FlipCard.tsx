@@ -3,7 +3,6 @@ import {
 	Card,
 	Modal,
 	Col,
-	Image,
 	Link,
 	Row,
 	Grid,
@@ -11,6 +10,7 @@ import {
 import styles from "./FlipCard.module.scss";
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
+import Image from "next/image";
 
 
 interface Props {
@@ -141,7 +141,7 @@ export const FlipCard: FC<Props> = ({
 												width={50}
 												height={50}
 												alt="Lenguajes de Programacion"
-											></Image>
+											/>
 										</Grid>
 									))}
 								</Grid.Container>

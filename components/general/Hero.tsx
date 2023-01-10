@@ -37,7 +37,7 @@ export const Hero = () => {
 
 			<Row data-aos="fade-in" align="center" justify="center">
 				<Text
-					h3
+					h4
 					size={40}
 					css={{ textShadow: "1px 1px 2px black" }}
 					transform="uppercase"

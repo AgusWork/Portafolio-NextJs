@@ -104,6 +104,7 @@ export const Contact = () => {
 								style={{ border: "0" }}
 								// allowfullscreen={true}
 								loading="lazy"
+								title="Cordoba Capital"
 								// referrerpolicy="no-referrer-when-downgrade"
 							></iframe>
 						</Row>
@@ -134,6 +135,7 @@ export const Contact = () => {
 											clearable
 											name="nombre"
 											onCambio={handleInputChange}
+											aria-label="name"
 										/>
 									</Grid>
 									<Grid sm={12} md={6} css={{padding:"0"}} style={{width:"100%"}}>
@@ -143,6 +145,7 @@ export const Contact = () => {
 											clearable
 											name="email"
 											onCambio={handleInputChange}
+											aria-label="email"
 										/>
 									</Grid>
 									<Grid sm={12} css={{padding:"0"} }style={{width:"100%"}}>
@@ -152,6 +155,7 @@ export const Contact = () => {
 											type="text"
 											name="motivo"
 											onCambio={handleInputChange}
+											aria-label="motivo"
 										/>
 									</Grid>
 									<Grid sm={12} css={{padding:"0"}} style={{width:"100%"}}>
@@ -161,6 +165,7 @@ export const Contact = () => {
 											rows={5}
 											name="mensaje"
 											onCambio={handleInputChange}
+											aria-label="mensaje"
 										/>
 									</Grid>
 								</Grid.Container>
