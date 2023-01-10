@@ -139,7 +139,7 @@ export const FlipCard: FC<Props> = ({
 												key={idx}
 												src={leng}
 												width={50}
-												height={50}
+      											height={50}
 												alt="Lenguajes de Programacion"
 											/>
 										</Grid>
