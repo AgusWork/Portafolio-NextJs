@@ -109,10 +109,11 @@ export const FlipCard: FC<Props> = ({
 		</Modal>
 		<Card className={styles.flipCard}>
 			<div className={styles.flipCardInner}>
-				<Card.Image
+				<Image
 					src={image}
 					objectFit="fill"
-					width="100%"
+					width={"100%"}
+					height={"100%"}
 					className={styles.flipCardFront}
 					alt={client}
 				/>
