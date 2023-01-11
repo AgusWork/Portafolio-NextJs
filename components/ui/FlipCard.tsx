@@ -68,13 +68,7 @@ export const FlipCard: FC<Props> = ({
 					{
 						imagenes.map((img, idx) => (
 							<div key={idx} className="keen-slider__slide">
-								<Image
-												src={img} 
-												key={idx}
-												width={"100%"}
-      											height={"60vh"}
-												  alt={img}
-											/>
+								<img src={img} key={idx} style={{width:"100%", height:"60vh"}} alt={img} />
 								
 							</div>
 							
@@ -109,7 +103,7 @@ export const FlipCard: FC<Props> = ({
 		</Modal>
 		<Card className={styles.flipCard}>
 			<div className={styles.flipCardInner}>
-				<Image
+			<Image
 					src={image}
 					layout={"fill"}
 					className={styles.flipCardFront}
