@@ -111,9 +111,7 @@ export const FlipCard: FC<Props> = ({
 			<div className={styles.flipCardInner}>
 				<Image
 					src={image}
-					objectFit="fill"
-					width={"100%"}
-					height={"100%"}
+					layout={"fill"}
 					className={styles.flipCardFront}
 					alt={client}
 				/>
