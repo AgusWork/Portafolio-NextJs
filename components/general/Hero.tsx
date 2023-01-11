@@ -14,7 +14,7 @@ export const Hero = () => {
 				background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/lagoCanada.jpg) `,
 				height: "100vh",
 				width: "100vw",
-				backgroundSize: "100vw 100vh",
+				backgroundSize: "100% 100%",
 				padding: "none",
 				margin: "0",
 			}}
