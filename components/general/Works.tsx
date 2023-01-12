@@ -8,21 +8,22 @@ import { useInView } from "react-intersection-observer";
 import useSWR from "swr";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-type Works = {
-	data?: {};
-	error?: string;
-};
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+// type Works = {
+// 	data?: {};
+// 	error?: string;
+// };
+// const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
-export const Works = () => {
+export const Works = (props : {props : {}}) => {
 	const { ref, inView } = useInView();
-	const { data, error } = useSWR("/api/staticdata", fetcher);
+	// const { data, error } = useSWR("/api/staticdata", fetcher);
 
+	console.log(props.props)
 
+	const data = props.props;
 
-	if (error) return <div>Failed to load</div>;
 	//Handle the loading state
 	if (!data)
 		return (
@@ -64,7 +65,7 @@ export const Works = () => {
 				</Row>
 				<Row justify="center">
 					<Grid.Container gap={4} css={{ width: "100%" }} justify="center">
-						{newData.records.map((d, idx) => (
+						{newData.posts.map((d, idx) => (
 							<Grid
 								xs={12}
 								sm={12}

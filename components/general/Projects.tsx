@@ -5,24 +5,24 @@ import { FlipCard } from "../ui";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
-import useSWR from "swr";
+// import useSWR from "swr";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-type Projects = {
-	data?: {};
-	error?: string;
-};
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+// type Projects = {
+// 	data?: {};
+// 	error?: string;
+// };
+// const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
-export const Projects = () => {
+
+export const Projects = (props : {props : {}} ) => {
 	const { ref, inView } = useInView();
-	const { data, error } = useSWR("/api/projectsdata", fetcher);
+	
+	console.log(props.props)
 
-
-
-	if (error) return <div>Failed to load</div>;
+	const data = props.props;
 	//Handle the loading state
 	if (!data)
 		return (
@@ -63,7 +63,7 @@ export const Projects = () => {
 				</Row>
 				<Row justify="center">
 					<Grid.Container gap={4} css={{ width: "100%" }} justify="center">
-						{newData.records.map((d, idx) => (
+						{newData.posts.map((d, idx) => (
 							<Grid
 								xs={12}
 								sm={12}
@@ -97,5 +97,7 @@ export const Projects = () => {
 		</Row>
 	);
 };
+
+
 
 // ${inView ? styles.borderAction : styles.border}
