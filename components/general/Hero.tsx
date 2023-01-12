@@ -11,14 +11,17 @@ export const Hero = () => {
 				display:"flex",
 				flexDirection: "column",
 				alignItems:"center",
-				background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/lagoCanada.jpg) `,
 				height: "100vh",
 				width: "100vw",
-				backgroundSize: "100% 100%",
 				padding: "none",
 				margin: "0",
 			}}
 		>
+			<Image style={{
+				background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) `,
+				backgroundSize: "100% 100%",
+				zIndex:"0",
+			}} src={"/lagoCanada.jpg"} alt="Hero background" layout="fill" objectFit="cover" objectPosition="center" priority />
 			<div className={styles.FotoPerfil} >
 				<Image
 					src="/Yo-Curriculum.jpg"
