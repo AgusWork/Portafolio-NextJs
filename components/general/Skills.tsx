@@ -5,22 +5,15 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
-import useSWR from "swr";
 import { SkillsCard } from "../ui/SkillsCard";
 
 
-
-type Works = {
-	data?: {};
-	error?: string;
-};
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
-export const Skills: FC<Works> = () => {
+export const Skills = (props : {props : {}} ) => {
 
 	const { ref, inView } = useInView();
-	const { data, error } = useSWR("/api/languajes ", fetcher);
+
+	const data = props.props;
  
-	if (error) return <div>Failed to load</div>;
 	//Handle the loading state
 	if (!data)
 		return (

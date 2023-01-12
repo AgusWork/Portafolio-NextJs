@@ -5,22 +5,11 @@ import { FlipCard } from "../ui";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
-import useSWR from "swr";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-// type Works = {
-// 	data?: {};
-// 	error?: string;
-// };
-// const fetcher = (url: string) => fetch(url).then((r) => r.json());
-
-//Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 
 export const Works = (props : {props : {}}) => {
 	const { ref, inView } = useInView();
-	// const { data, error } = useSWR("/api/staticdata", fetcher);
-
-	console.log(props.props)
 
 	const data = props.props;
 

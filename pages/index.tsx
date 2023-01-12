@@ -5,13 +5,13 @@ import fsPromises from 'fs/promises';
 import path from 'path'
 
 
-const HomePage: NextPage = (props : {objectDataProjects : {}, objectDataWorks : {} }) => {
+const HomePage: NextPage = (props : {objectDataProjects : {}, objectDataWorks : {}, objectDataLenguajes : {} }) => {
 	return (
 		<Layout title="Portafolio" >
 			<Works props={props.objectDataWorks} />
 			<Projects props={props.objectDataProjects}/>
 			<About />
-			<Skills />
+			<Skills props={props.objectDataLenguajes}/>
 			<SoftSkills/>
 			<Contact/>
 		</Layout>
@@ -26,9 +26,13 @@ export async function getStaticProps() {
 	const filePathWorks = path.join(process.cwd(), 'projectsdata.json');
 	const jsonDataWorks = await fsPromises.readFile(filePathWorks);
 	const objectDataWorks = JSON.parse(jsonDataWorks.toString());
+
+	const filePathLenguajes = path.join(process.cwd(), 'projectsdata.json');
+	const jsonDataLenguajes = await fsPromises.readFile(filePathLenguajes);
+	const objectDataLenguajes = JSON.parse(jsonDataLenguajes.toString());
   
 	return {
-	  props: {objectDataProjects, objectDataWorks }
+	  props: {objectDataProjects, objectDataWorks, objectDataLenguajes }
 	}
   }
 

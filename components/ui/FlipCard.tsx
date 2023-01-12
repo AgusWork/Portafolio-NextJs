@@ -148,8 +148,10 @@ export const FlipCard: FC<Props> = ({
 						</ul>
 						<Row justify="space-evenly" style={{width:"100%", margin:"20px 0 20px 0", padding:"0",}}>
 							
-{	link != "" &&					<Link isExternal style={{maxWidth:"150px" ,width:"150px",  height:"50px", border:"2px solid" ,borderRadius:"20px", backgroundColor:"white", justifyContent:"center"}} href={link}>Visitar</Link>
-}							<button onClick={() => openPictures()} style={{maxWidth:"150px" ,width:"150px",  height:"50px", border:"2px solid #0072F5", color:"#0072F5", borderRadius:"20px", backgroundColor:"white", justifyContent:"center"}}>Ver Fotos</button>
+					{	link != "" &&	
+						<Link isExternal style={{maxWidth:"150px" ,width:"150px",  height:"50px", border:"2px solid" ,borderRadius:"20px", backgroundColor:"white", justifyContent:"center"}} href={link}>Visitar</Link>
+							}	
+					<button onClick={() => openPictures()} style={{maxWidth:"150px" ,width:"150px",  height:"50px", border:"2px solid #0072F5", color:"#0072F5", borderRadius:"20px", backgroundColor:"white", justifyContent:"center"}}>Ver Fotos</button>
 
 						</Row>
 					</Col>

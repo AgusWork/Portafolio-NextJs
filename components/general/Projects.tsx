@@ -20,7 +20,6 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 export const Projects = (props : {props : {}} ) => {
 	const { ref, inView } = useInView();
 	
-	console.log(props.props)
 
 	const data = props.props;
 	//Handle the loading state
