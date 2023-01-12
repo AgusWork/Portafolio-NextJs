@@ -5,24 +5,12 @@ import { FlipCard } from "../ui";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
-// import useSWR from "swr";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-// type Projects = {
-// 	data?: {};
-// 	error?: string;
-// };
-// const fetcher = (url: string) => fetch(url).then((r) => r.json());
-
-//Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
-
-
-export const Projects = (props : {props : {}} ) => {
+export const Projects = (props: { props: {} }) => {
 	const { ref, inView } = useInView();
-	
-
 	const data = props.props;
-	//Handle the loading state
+
 	if (!data)
 		return (
 			<Row className={styles.WorkContainer} css={{ height: "40vh" }}>
@@ -36,9 +24,6 @@ export const Projects = (props : {props : {}} ) => {
 		);
 
 	const newData: any = data;
-	// if (inView) {
-	// 	console.log("inView", inView);
-	// }
 
 	return (
 		<Row className={styles.WorkContainer} id="Exp. Profesional">
@@ -54,7 +39,7 @@ export const Projects = (props : {props : {}} ) => {
 							h2
 							size={50}
 							className={`${styles.border}`}
-							style={{margin:"3px"}}
+							style={{ margin: "3px" }}
 						>
 							Experiencia Profesional
 						</Text>
@@ -96,7 +81,5 @@ export const Projects = (props : {props : {}} ) => {
 		</Row>
 	);
 };
-
-
 
 // ${inView ? styles.borderAction : styles.border}

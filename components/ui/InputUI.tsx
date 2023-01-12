@@ -14,7 +14,10 @@ export const InputUI = ({ label, type, clearable = false, name, onCambio }) => {
 			<input
 				className={styles.inputInput}
 				value={inputValue}
-				onChange={(e) => { handleChange(e); onCambio(e); }}
+				onChange={(e) => {
+					handleChange(e);
+					onCambio(e);
+				}}
 				type={type}
 				name={name}
 			></input>

@@ -1,9 +1,9 @@
 import React from "react";
-import { Row, Text, Col, Grid, Button, Container } from "@nextui-org/react";
+import styles from "./styles.module.scss";
+import { Row, Text, Col } from "@nextui-org/react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
-import styles from "./styles.module.scss";
 
 export const SoftSkills = () => {
 	const { ref, inView } = useInView();
@@ -76,7 +76,7 @@ export const SoftSkills = () => {
 							</li>
 							<li>
 								<Text className={styles.softSkillsText} color="black">
-									Buena capacidad de organizacion 
+									Buena capacidad de organizacion
 								</Text>
 							</li>
 							<li>
@@ -91,7 +91,7 @@ export const SoftSkills = () => {
 					<Col>
 						<Text
 							h2
-                            size={50}
+							size={50}
 							color="black"
 							css={{
 								marginLeft: "30px",

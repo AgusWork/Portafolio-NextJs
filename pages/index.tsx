@@ -4,7 +4,6 @@ import { Works, About, Skills, SoftSkills, Contact, Projects } from "../componen
 import fsPromises from 'fs/promises';
 import path from 'path'
 
-
 const HomePage: NextPage = (props : {objectDataProjects : {}, objectDataWorks : {}, objectDataLenguajes : {} }) => {
 	return (
 		<Layout title="Portafolio" >

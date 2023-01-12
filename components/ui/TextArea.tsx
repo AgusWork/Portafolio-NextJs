@@ -20,7 +20,10 @@ export const TextArea = ({
 			<textarea
 				className={styles.inputInput}
 				value={inputValue}
-				onChange={(e) => { handleChange(e); onCambio(e); }}
+				onChange={(e) => {
+					handleChange(e);
+					onCambio(e);
+				}}
 				rows={rows}
 				name={name}
 			></textarea>

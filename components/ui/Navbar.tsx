@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTheme, Navbar, Row, Link } from "@nextui-org/react";
 import styles from "./UiStyles.module.scss";
-const links = ["Exp. Laboral","Exp. Profesional" , "Sobre Mi", "Habilidades", "Habilidades blandas", "Contacto"];
 import Scrollspy from "react-scrollspy";
+const links = ["Exp. Laboral","Exp. Profesional" , "Sobre Mi", "Habilidades", "Habilidades blandas", "Contacto"];
 
 export const NavBar = () => {
 	const { theme } = useTheme();
@@ -16,7 +16,6 @@ export const NavBar = () => {
 			element.scrollIntoView({ behavior: "smooth" });
 		}
 	};
-
 	// Required
 	// this is how we enable again scroll after closing Navbar.Collapse
 	// when we dont click the Navbar.Toggle button

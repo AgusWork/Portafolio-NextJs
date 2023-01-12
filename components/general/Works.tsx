@@ -1,19 +1,16 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Row, Text, Col, Grid } from "@nextui-org/react";
+import React from "react";
 import styles from "./styles.module.scss";
+import { Row, Text, Col, Grid } from "@nextui-org/react";
 import { FlipCard } from "../ui";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-
-export const Works = (props : {props : {}}) => {
+export const Works = (props: { props: {} }) => {
 	const { ref, inView } = useInView();
-
 	const data = props.props;
 
-	//Handle the loading state
 	if (!data)
 		return (
 			<Row className={styles.WorkContainer} css={{ height: "40vh" }}>
@@ -27,9 +24,6 @@ export const Works = (props : {props : {}}) => {
 		);
 
 	const newData: any = data;
-	// if (inView) {
-	// 	console.log("inView", inView);
-	// }
 
 	return (
 		<Row className={styles.WorkContainer} id="Exp. Laboral">
@@ -78,7 +72,6 @@ export const Works = (props : {props : {}}) => {
 										duration={d.duration}
 										language={d.language}
 										imagenes={d.imagenes}
-
 									/>
 								</AnimationOnScroll>
 							</Grid>
@@ -89,5 +82,3 @@ export const Works = (props : {props : {}}) => {
 		</Row>
 	);
 };
-
-// ${inView ? styles.borderAction : styles.border}

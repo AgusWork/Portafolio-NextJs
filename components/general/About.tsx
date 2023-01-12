@@ -18,7 +18,7 @@ export const About = () => {
 			id="Sobre Mi"
 		>
 			<Col css={{ padding: "0" }}>
-				<Row justify="center" >
+				<Row justify="center">
 					<AnimationOnScroll
 						animateIn="animate__fadeIn"
 						animateOnce={true}
@@ -49,44 +49,42 @@ export const About = () => {
 						mundo de la programacion.
 					</Text>
 				</Row>
-			
-					
 
-					<Col className={styles.btnCurriculum}>
-						<Text
-								h2
-								color="black"
-								css={{
-									margin:"auto",
-									borderBottom: "3px solid grey",
-									textAlign:"center"
-								}}
-							>
-								{" "}
-								Clickear para descargar
-							</Text>
-						
-						<button>
-							<a
-								href={"./pdf/CurriculumVitae.pdf"}
-								target="_blank"
-								rel="noopener noreferrer"
-								download="CurriculumVitae.pdf"
-							>
-								Curriculum Vitae
-							</a>
-						</button>
-						<button>
-							<a
-								href={"./pdf/CurriculumVitae.pdf"}
-								target="_blank"
-								rel="noopener noreferrer"
-								download="CurriculumVitae.pdf"
-							>
-								Carta de Presentacion
-							</a>
-						</button>
-					</Col>
+				<Col className={styles.btnCurriculum}>
+					<Text
+						h2
+						color="black"
+						css={{
+							margin: "auto",
+							borderBottom: "3px solid grey",
+							textAlign: "center",
+						}}
+					>
+						{" "}
+						Clickear para descargar
+					</Text>
+
+					<button>
+						<a
+							href={"./pdf/CurriculumVitae.pdf"}
+							target="_blank"
+							rel="noopener noreferrer"
+							download="CurriculumVitae.pdf"
+						>
+							Curriculum Vitae
+						</a>
+					</button>
+					<button>
+						<a
+							href={"./pdf/CurriculumVitae.pdf"}
+							target="_blank"
+							rel="noopener noreferrer"
+							download="CurriculumVitae.pdf"
+						>
+							Carta de Presentacion
+						</a>
+					</button>
+				</Col>
 			</Col>
 		</Row>
 	);

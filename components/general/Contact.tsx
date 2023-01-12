@@ -30,9 +30,13 @@ export const Contact = () => {
 	};
 
 	return (
-		<Row className={styles.WorkContainer} css={{ padding: "40px" }} id="Contacto">
+		<Row
+			className={styles.WorkContainer}
+			css={{ padding: "40px" }}
+			id="Contacto"
+		>
 			<Col>
-				<Row justify="center" >
+				<Row justify="center">
 					<AnimationOnScroll
 						animateIn="animate__fadeIn"
 						animateOnce={true}
@@ -50,7 +54,11 @@ export const Contact = () => {
 						</Text>
 					</AnimationOnScroll>
 				</Row>
-				<Row className={styles.contactContainer} justify="center" align="center">
+				<Row
+					className={styles.contactContainer}
+					justify="center"
+					align="center"
+				>
 					<Col
 						css={{
 							marginRight: "15px",
@@ -60,10 +68,10 @@ export const Contact = () => {
 							boxShadow: " 0px 0px 20px rgba(0, 0, 0, 1)",
 							borderRadius: "10px",
 							width: "90%",
-							display:"flex",
-							flexDirection:"column",
-							justifyContent:"center",
-							alignItems:"center"
+							display: "flex",
+							flexDirection: "column",
+							justifyContent: "center",
+							alignItems: "center",
 						}}
 						className={styles.contactLocation}
 					>
@@ -78,8 +86,8 @@ export const Contact = () => {
 						</Row>
 						<Row className={styles.contactIcon} align="center">
 							<EmailTwoToneIcon sx={{ color: "#0253b4", fontSize: "45px" }} />
-							<Col style={{ wordWrap: "break-word", overflow:"hidden" }}>
-								<Text color="black" h3 css={{ margin: "0px"}}>
+							<Col style={{ wordWrap: "break-word", overflow: "hidden" }}>
+								<Text color="black" h3 css={{ margin: "0px" }}>
 									Email:
 								</Text>
 								<Text color="black">agustin.cordoba.work@gmail.com</Text>
@@ -102,14 +110,15 @@ export const Contact = () => {
 								width="100%"
 								height="450"
 								style={{ border: "0" }}
-								// allowfullscreen={true}
 								loading="lazy"
 								title="Cordoba Capital"
-								// referrerpolicy="no-referrer-when-downgrade"
 							></iframe>
 						</Row>
 					</Col>
-					<form onSubmit={enviarDatos} style={{ width: "100%", display:"flex", justifyContent:"center"}}>
+					<form
+						onSubmit={enviarDatos}
+						style={{ width: "100%", display: "flex", justifyContent: "center" }}
+					>
 						<Col
 							css={{
 								backgroundColor: "#AAA",
@@ -119,16 +128,24 @@ export const Contact = () => {
 								display: "flex",
 								flexDirection: "column",
 								alignItems: "center",
-								justifyContent:"center",
-
+								justifyContent: "center",
 							}}
 						>
-							<Text color="white" h3 css={{textAlign:"center", margin:"4px"}}>
+							<Text
+								color="white"
+								h3
+								css={{ textAlign: "center", margin: "4px" }}
+							>
 								Aqui podran mandarme cualquier consulta que deseen:
 							</Text>{" "}
-							<Row justify="center" align="center" style={{width:"100%"}}>
-								<Grid.Container gap={3}  style={{width:"100%"}}>
-									<Grid sm={12} md={6} css={{padding:"0"}} style={{width:"100%"}}>
+							<Row justify="center" align="center" style={{ width: "100%" }}>
+								<Grid.Container gap={3} style={{ width: "100%" }}>
+									<Grid
+										sm={12}
+										md={6}
+										css={{ padding: "0" }}
+										style={{ width: "100%" }}
+									>
 										<InputUI
 											label="Nombre"
 											type="text"
@@ -138,7 +155,12 @@ export const Contact = () => {
 											aria-label="name"
 										/>
 									</Grid>
-									<Grid sm={12} md={6} css={{padding:"0"}} style={{width:"100%"}}>
+									<Grid
+										sm={12}
+										md={6}
+										css={{ padding: "0" }}
+										style={{ width: "100%" }}
+									>
 										<InputUI
 											label="Email"
 											type="text"
@@ -148,7 +170,11 @@ export const Contact = () => {
 											aria-label="email"
 										/>
 									</Grid>
-									<Grid sm={12} css={{padding:"0"} }style={{width:"100%"}}>
+									<Grid
+										sm={12}
+										css={{ padding: "0" }}
+										style={{ width: "100%" }}
+									>
 										<InputUI
 											clearable
 											label="Motivo"
@@ -158,7 +184,11 @@ export const Contact = () => {
 											aria-label="motivo"
 										/>
 									</Grid>
-									<Grid sm={12} css={{padding:"0"}} style={{width:"100%"}}>
+									<Grid
+										sm={12}
+										css={{ padding: "0" }}
+										style={{ width: "100%" }}
+									>
 										<TextArea
 											clearable
 											label="Mensaje a enviar"
@@ -171,7 +201,9 @@ export const Contact = () => {
 								</Grid.Container>
 							</Row>
 							<Row justify="center">
-								<Button type="submit" css={{margin:"20px 0px"}}>Enviar Mensaje</Button>
+								<Button type="submit" css={{ margin: "20px 0px" }}>
+									Enviar Mensaje
+								</Button>
 							</Row>
 						</Col>
 					</form>
@@ -180,14 +212,3 @@ export const Contact = () => {
 		</Row>
 	);
 };
-
-// const inputStyles: CSS.Properties = {
-// 	border: "2px solid gray",
-// 											background: "white",
-// 											$$inputColor: "#fff",
-// 											$$color: "yellow",
-// 											width:"100%",
-// 											"&:focus": {
-// 												border: "0px",
-// 											},
-//   };
