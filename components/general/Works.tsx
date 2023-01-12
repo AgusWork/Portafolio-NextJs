@@ -54,7 +54,7 @@ export const Works = (props : {props : {}}) => {
 				</Row>
 				<Row justify="center">
 					<Grid.Container gap={4} css={{ width: "100%" }} justify="center">
-						{newData.posts.map((d, idx) => (
+						{newData.records.map((d, idx) => (
 							<Grid
 								xs={12}
 								sm={12}

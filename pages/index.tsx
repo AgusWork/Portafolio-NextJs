@@ -23,11 +23,11 @@ export async function getStaticProps() {
 	const jsonDataProjects = await fsPromises.readFile(filePathProjects);
 	const objectDataProjects = JSON.parse(jsonDataProjects.toString());
 
-	const filePathWorks = path.join(process.cwd(), 'projectsdata.json');
+	const filePathWorks = path.join(process.cwd(), 'staticdata.json');
 	const jsonDataWorks = await fsPromises.readFile(filePathWorks);
 	const objectDataWorks = JSON.parse(jsonDataWorks.toString());
 
-	const filePathLenguajes = path.join(process.cwd(), 'projectsdata.json');
+	const filePathLenguajes = path.join(process.cwd(), 'languajes.json');
 	const jsonDataLenguajes = await fsPromises.readFile(filePathLenguajes);
 	const objectDataLenguajes = JSON.parse(jsonDataLenguajes.toString());
   
