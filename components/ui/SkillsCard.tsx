@@ -11,7 +11,7 @@ interface Props  {
 export const SkillsCard: FC<Props> = ({image, language}) => {
   return (
 	<Card className={styles.Card} role={"contentinfo"}>
-            <Card.Header><Text h4>{language}</Text></Card.Header>
+            <Card.Header><Text size={30}>{language}</Text></Card.Header>
             <Image className={styles.image} src={image} alt={language} width={"200px"} height={"200px"} />
 		</Card>  )
 }
