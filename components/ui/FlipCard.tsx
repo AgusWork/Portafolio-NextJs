@@ -90,7 +90,7 @@ export const FlipCard: FC<Props> = ({
 					)}
 				</div>
 			</Modal>
-			<Card className={styles.flipCard}>
+			<Card className={styles.flipCard} role={"contentinfo"}>
 				<div className={styles.flipCardInner}>
 					<Image
 						src={image}
