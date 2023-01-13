@@ -20,7 +20,6 @@ export const Hero = () => {
 			<Image
 				style={{
 					background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) `,
-					backgroundSize: "100% 100%",
 					zIndex: "0",
 				}}
 				src={"/lagoCanada.jpg"}
@@ -32,11 +31,12 @@ export const Hero = () => {
 			/>
 			<div className={styles.FotoPerfil}>
 				<Image
-					src="/Yo-Curriculum.jpg"
+					src={"/Yo-Curriculum.jpg"}
 					objectFit="cover"
 					width="300px"
 					height="300px"
 					alt="Foto Curriculum Agustin Maria Cordoba"
+					priority
 				/>
 			</div>
 			<Row data-aos="fade-in" align="center" justify="center">
