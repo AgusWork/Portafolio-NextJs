@@ -146,6 +146,7 @@ export const FlipCard: FC<Props> = ({
 										style={{
 											maxWidth: "150px",
 											width: "15vw",
+											minWidth: "90px",
 											height: "50px",
 											border: "2px solid",
 											borderRadius: "20px",
@@ -162,6 +163,7 @@ export const FlipCard: FC<Props> = ({
 									style={{
 										maxWidth: "150px",
 										width: "15vw",
+										minWidth: "90px",
 										height: "50px",
 										border: "2px solid #0072F5",
 										color: "#0072F5",
@@ -171,7 +173,7 @@ export const FlipCard: FC<Props> = ({
 										cursor:"pointer"
 									}}
 								>
-									Ver Fotos
+								 Fotos
 								</button>
 							</Row>
 						</Col>
