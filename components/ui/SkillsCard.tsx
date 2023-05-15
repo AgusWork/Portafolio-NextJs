@@ -12,6 +12,6 @@ export const SkillsCard: FC<Props> = ({image, language}) => {
   return (
 	<Card className={styles.Card} role={"contentinfo"}>
             <Card.Header><Text size={30}>{language}</Text></Card.Header>
-            <Image className={styles.image} src={image} alt={language} width={"200px"} height={"200px"} />
+            <Image className={styles.image} src={image} alt={language} width={150} height={150} />
 		</Card>  )
 }

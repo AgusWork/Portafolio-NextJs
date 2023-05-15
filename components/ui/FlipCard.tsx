@@ -94,30 +94,32 @@ export const FlipCard: FC<Props> = ({
 				<div className={styles.flipCardInner}>
 					<Image
 						src={image}
-						layout={"fill"}
+						fill
+						// height={100}
+						// width={100}
 						className={styles.flipCardFront}
 						alt={client}
 					/>
 					<div className={styles.flipCardBack}>
 						<Col className={styles.innerFCB}>
 							<ul className={styles.list}>
-								<li>
-									<strong>Categoria:</strong>: {category}
+								<li >
+									<p style={{fontSize:"100%"}}><strong>Categoria:</strong>: {category}</p>
 								</li>
 
-								<li>
-									<strong>Cliente</strong>: {client}
+								<li style={{fontSize:"100%"}}>
+									<p><strong>Cliente</strong>: {client}</p>
 								</li>
-								<li>
-									<strong>Fecha del Proyecto</strong>: {date}
+								<li style={{fontSize:"100%"}}>
+									<p><strong>Fecha del Proyecto</strong>: {date}</p>
 								</li>
-								<li>
-									<strong>Descripcion:</strong>: {duration}
+								<li style={{fontSize:"100%"}}>
+									<p><strong>Descripcion:</strong>: {duration}</p>
 								</li>
 
 								<Row>
 									<li>
-										<strong>Tecnologias</strong>:{" "}
+										<p><strong>Tecnologias</strong>:{" "}</p>
 									</li>
 									<Grid.Container>
 										{language.map((leng, idx) => (
@@ -143,7 +145,7 @@ export const FlipCard: FC<Props> = ({
 										isExternal
 										style={{
 											maxWidth: "150px",
-											width: "150px",
+											width: "15vw",
 											height: "50px",
 											border: "2px solid",
 											borderRadius: "20px",
@@ -159,13 +161,14 @@ export const FlipCard: FC<Props> = ({
 									onClick={() => openPictures()}
 									style={{
 										maxWidth: "150px",
-										width: "150px",
+										width: "15vw",
 										height: "50px",
 										border: "2px solid #0072F5",
 										color: "#0072F5",
 										borderRadius: "20px",
 										backgroundColor: "white",
 										justifyContent: "center",
+										cursor:"pointer"
 									}}
 								>
 									Ver Fotos

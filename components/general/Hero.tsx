@@ -17,24 +17,27 @@ export const Hero = () => {
 				margin: "0",
 			}}
 		>
-			<Image
+			<div
 				style={{
 					background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) `,
+					backgroundImage: `url("./lagoCanada.jpg")` ,
+					backgroundSize:"100% 100%",
+					backgroundRepeat : "no-repeat",
 					zIndex: "0",
+					width:"100%",
+					height:"100%",
+					display:"flex",
+					flexDirection:"column",
+					justifyContent:"center",
+					alignItems:"center"
 				}}
-				src={"/lagoCanada.jpg"}
-				alt="Hero background"
-				layout="fill"
-				objectFit="cover"
-				objectPosition="center"
-				priority
-			/>
+			>
 			<div className={styles.FotoPerfil}>
 				<Image
 					src={"/Yo-Curriculum.jpg"}
-					objectFit="cover"
-					width="300px"
-					height="300px"
+					style={{objectFit:"cover"}}
+					width="300"
+					height="300"
 					alt="Foto Curriculum Agustin Maria Cordoba"
 					priority
 				/>
@@ -61,9 +64,10 @@ export const Hero = () => {
 					className={styles.TextProf}
 					color="white"
 				>
-					Desarrollador Front End, Tecnico Mecanico
+					Front End Devloper
 				</Text>
 			</Row>
+			</div>
 		</Row>
 	);
 };
