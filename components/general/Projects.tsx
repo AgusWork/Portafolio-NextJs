@@ -39,7 +39,6 @@ export const Projects = (props: { props: {} }) => {
 							h2
 							size={50}
 							className={`${styles.border}`}
-							style={{ margin: "3px" }}
 						>
 							Experiencia Profesional
 						</Text>

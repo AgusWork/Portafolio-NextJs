@@ -110,6 +110,33 @@
 					"/practicas/OpenJira/Open5.png",
 					"/practicas/OpenJira/OpenVideo.mp4"
 				]
+			},
+			{
+				"image": "/practicas/OpenJira/Open1.png",
+				"category": "Practice",
+				"client": "Open Jira",
+				"date": "05 Julio, 2022",
+				"link": "",
+				"duration":
+					"App de Organizacion de entradas, metodologia scrum, ademas se puede arrastrar y cambiar de estado de la entrada",
+				"language": [
+					"/iconos/Git.png",
+					"/iconos/NextJs.png",
+					"/iconos/Figma.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png",
+					"/iconos/MongoDB.png",
+					"/iconos/Docker.png",
+					"/iconos/Node.png"
+				],
+				"imagenes": [
+					"/practicas/OpenJira/Open1.png",
+					"/practicas/OpenJira/Open2.png",
+					"/practicas/OpenJira/Open3.png",
+					"/practicas/OpenJira/Open4.png",
+					"/practicas/OpenJira/Open5.png",
+					"/practicas/OpenJira/OpenVideo.mp4"
+				]
 			}
 		]
 	}

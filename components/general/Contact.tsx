@@ -127,14 +127,16 @@ export const Contact = () => {
 								borderRadius: "10px",
 								display: "flex",
 								flexDirection: "column",
-								alignItems: "center",
-								justifyContent: "center",
+								padding: " 3vh 2vw ",
+								justifyContent:"space-between",
+								minHeight: "730px",
 							}}
 						>
 							<Text
 								color="white"
 								h3
 								css={{ textAlign: "center", margin: "4px" }}
+								className={styles.titleContact}
 							>
 								Aqui podran mandarme cualquier consulta que deseen:
 							</Text>{" "}
