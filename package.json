@@ -25,6 +25,7 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.0",
     "react-scrollspy": "^3.4.3",
+    "react-slideshow-image": "^4.2.1",
     "react-spinners": "^0.13.6",
     "react-whatsapp": "^0.3.0",
     "sass": "^1.55.0",
