@@ -39,7 +39,7 @@ export const Skills = (props: { props: {} }) => {
 				<Row justify="center">
 					<Grid.Container gap={4} css={{ width: "100%" }} justify="center">
 						{newData.records.map((d, idx) => (
-							<Grid xs={6} sm={4} md={4} lg={2} xl={2} key={idx} justify="center">
+							<Grid xs={6} sm={4} md={3} lg={2} xl={2} key={idx} justify="center">
 								<AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} duration={2}>
 									<SkillsCard image={d.image} language={d.language} />
 								</AnimationOnScroll>

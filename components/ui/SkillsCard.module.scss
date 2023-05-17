@@ -3,33 +3,45 @@
 .Card {
 	width: "350px";
 	height: "250px";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+	&:hover {
+		transform: scale(1.2);
+	} 
 
-    &:hover{
-        transform: scale(1.2);
-    }
-
-    @media #{$mobileS}{
-		width: 150px;
-		height: 170px;	 
+	@media #{$mobile} {
+        width:100%;
+		height: 170px;
 	}
-	@media #{$mobileXs}{
-		width: 110px;
-		height: 150px;	 
+	@media #{$mobileS} {
+		min-width: 120px;
+        width:100%;
+		height: 170px;
+	}
+	@media #{$mobileXs} {
+        min-width: 110px;
+		width: 100px;
+		height: 100%;
 	}
 }
 
-.image{
-    animation: showUpandDown 3s linear infinite;
+.image {
+	animation: showUpandDown 3s linear infinite;
+	@media #{$mobileXs} {
+		max-height: "45px";
+	}
 }
 
 @keyframes showUpandDown {
-    0%{
-        transform: scale(0.8);
-    }
-    50% {
-        transform: scale(0.9);
-    }
-    100%{
-        transform: scale(0.8);
-    }
+	0% {
+		transform: scale(0.8);
+	}
+	50% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(0.8);
+	}
 }

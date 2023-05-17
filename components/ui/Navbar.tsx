@@ -42,7 +42,7 @@ export const NavBar = () => {
 			variant="sticky"
 			isCompact
 		>
-			<Navbar.Brand style={{background:"#019fb6", borderRadius:"100%"}}
+			<Navbar.Brand style={{ borderRadius:"100%"}}
 >
 				<Navbar.Toggle
 					aria-label="toggle navigation"

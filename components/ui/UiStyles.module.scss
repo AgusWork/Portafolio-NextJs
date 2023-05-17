@@ -69,6 +69,8 @@
 
 	@media #{$mobile} {
 		margin:0;
+	}
+	@media #{$mobileXs} {
 		color: white;
 	}
 }
