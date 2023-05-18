@@ -3,10 +3,10 @@
 		{
 			"image": "/teslo-shop/Teslo1.jpg",
 			"category": "Practice",
-			"client": "Open Jira",
-			"date": "05 Julio, 2022",
+			"client": "Teslo - Shop",
+			"date": "28 Abril, 2023",
 			"link": "https://teslo-shop-aguscba.vercel.app/",
-			"duration": "App de Organizacion de entradas, metodologia scrum, ademas se puede arrastrar y cambiar de estado de la entrada",
+			"duration": "E-commerce completo con sistema de pedidos, pago en paypal y ML, creacion de usuario con github, google y correo electronico, como tambien un sistema de admin para la creacion, edicion, eliminacion de productos, con la capacidad de poder ver los pedidos pendientes de pagos y sus estatus, como de administracion de otros usuarios y control de stock, con ademas todas las validaciones pertinentes para no poder falsificar pagos, ni conectarse en url no correspondientes",
 			"language": [
 				"/iconos/Git.png",
 				"/iconos/NextJs.png",
@@ -97,42 +97,6 @@
 				"/practicas/Pokemon/Pokemon2.png",
 				"/practicas/Pokemon/Pokemon3.png",
 				"/practicas/Pokemon/Pokemon4.png"
-			]
-		},
-		{
-			"image": "/practicas/GifApp/Gif1.png",
-			"category": "Practice",
-			"client": "Gif App",
-			"date": "20 Febrero, 2022",
-			"link": "https://react-gif-app-sigma.vercel.app/",
-			"duration": "App para buscar cualquier tipo de Gif que trae desde una api, search + api",
-			"language": ["/iconos/Git.png", "/iconos/Figma.png", "/iconos/React.png", "/iconos/Sass.png"],
-			"imagenes": ["/practicas/GifApp/Gif1.png", "/practicas/GifApp/Gif2.png", "/practicas/GifApp/Gif3.png"]
-		},
-		{
-			"image": "/practicas/OpenJira/Open1.png",
-			"category": "Practice",
-			"client": "Open Jira",
-			"date": "05 Julio, 2022",
-			"link": "",
-			"duration": "App de Organizacion de entradas, metodologia scrum, ademas se puede arrastrar y cambiar de estado de la entrada",
-			"language": [
-				"/iconos/Git.png",
-				"/iconos/NextJs.png",
-				"/iconos/Figma.png",
-				"/iconos/React.png",
-				"/iconos/Sass.png",
-				"/iconos/MongoDB.png",
-				"/iconos/Docker.png",
-				"/iconos/Node.png"
-			],
-			"imagenes": [
-				"/practicas/OpenJira/Open1.png",
-				"/practicas/OpenJira/Open2.png",
-				"/practicas/OpenJira/Open3.png",
-				"/practicas/OpenJira/Open4.png",
-				"/practicas/OpenJira/Open5.png",
-				"/practicas/OpenJira/OpenVideo.mp4"
 			]
 		}
 	]

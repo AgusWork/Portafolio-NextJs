@@ -1,6 +1,31 @@
 {
 		"records": [
 			{
+				"image": "/escribania/EscBuasso1.jpg",
+				"category": "Freelance",
+				"client": "Escribania Buasso",
+				"date": "12 Mayo, 2023",
+				"link": "https://escribania-buasso.vercel.app/",
+				"duration": "5 semanas",
+				"language": [
+					"/iconos/Git.png",
+					"/iconos/NextJs.png",
+					"/iconos/Figma.png",
+					"/iconos/Notion.png",
+					"/iconos/React.png",
+					"/iconos/Sass.png"
+				],
+				"imagenes": [
+					"/escribania/EscBuasso1.jpg",
+					"/escribania/EscBuasso2.jpg",
+					"/escribania/EscBuasso3.jpg",
+					"/escribania/EscBuasso4.jpg",
+					"/escribania/EscBuasso5.jpg",
+					"/escribania/EscBuasso6.jpg",
+					"/escribania/EscBuasso7.jpg"
+				]
+			},
+			{
 				"image": "/qualimed/FotoQualimed0.PNG",
 				"category": "Freelance",
 				"client": "Qualimed",
