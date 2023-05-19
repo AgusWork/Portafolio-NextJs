@@ -43,29 +43,6 @@ export const FlipCard: FC<Props> = ({ image, category, client, date, duration, l
 				<Box sx={{width: "70vw", height: "85vh", position:""}} >
 					<SlideShow images={imagenes} />
 				</Box>
-
-				{/* <Box sx={{Width: "70vw", height: "85vh", display:"flex", justifyContent:"center", alignItems: "center"}}>
-					<div className="navigation-wrapper">
-						<div ref={sliderRef} className="keen-slider">
-							{imagenes.map((img, idx) => (
-								<div key={idx} className="keen-slider__slide" style={{display:"flex", justifyContent:"center", alignItems: "center"}}>
-									<img src={img} key={idx} style={{ width: "100vw", height:"80vh" }} alt={img} />
-								</div>
-							))}
-						</div>
-
-						{loaded && instanceRef.current && (
-							<>
-								<Arrow left onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()} disabled={currentSlide === 0} />
-
-								<Arrow
-									onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
-									disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
-								/>
-							</>
-						)}
-					</div>
-				</Box> */}
 			</Modal>
 			{/* <Modal
 				closeButton

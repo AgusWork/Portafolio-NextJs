@@ -16,7 +16,8 @@ export const SlideShow: FC<Props> = ({ images }) => {
             <div
               style={{
                 backgroundImage: `url(${image})`,
-                backgroundSize:"cover"
+                backgroundSize:"100% 100%",
+                backgroundRepeat:"no-repeat"
               }}
             ></div>
           </div>
