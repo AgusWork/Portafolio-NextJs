@@ -98,6 +98,23 @@
 				"/practicas/Pokemon/Pokemon3.png",
 				"/practicas/Pokemon/Pokemon4.png"
 			]
+		},
+		{
+			"image": "/practicas/digiFianz/digi1.jpg",
+			"category": "Practice",
+			"client": "Digi Fianz Test",
+			"date": "20 de Octubre, 2021",
+			"link": "https://aguswork.github.io/DigiFianzTest/",
+			"duration": "Aplicacion de prueba toda en JS con sus funcionalidades (drraggable, toggle navbar, pop up)  hechas manualmente sin librerias ni npm's con el codigo limpio.",
+			"language": ["/iconos/Git.png", "/iconos/Figma.png", "/iconos/Javascript.png", "/iconos/css.png"],
+			"imagenes": [
+				"/practicas/digiFianz/digi1.jpg",
+				"/practicas/digiFianz/digi2.jpg",
+				"/practicas/digiFianz/digi3.jpg",
+				"/practicas/digiFianz/digi4.jpg",
+				"/practicas/digiFianz/digi5.jpg",
+				"/practicas/digiFianz/digi6.jpg"
+			]
 		}
 	]
 }
