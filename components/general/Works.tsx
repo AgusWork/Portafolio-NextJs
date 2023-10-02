@@ -72,6 +72,7 @@ export const Works = (props: { props: {} }) => {
 										duration={d.duration}
 										language={d.language}
 										imagenes={d.imagenes}
+										description={d.description}
 									/>
 								</AnimationOnScroll>
 							</Grid>

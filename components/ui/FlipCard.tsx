@@ -4,9 +4,9 @@ import { Card, Col, Link, Row, Grid } from "@nextui-org/react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react"
 import Image from "next/image"
-import { Box, Modal, Slider } from "@mui/material"
+import { Box, Modal, Slider, Tooltip, Typography } from "@mui/material"
 import { SlideShow } from "./SlideShow"
-
+import DescriptionIcon from "@mui/icons-material/Description"
 interface Props {
 	image: string
 	category: string
@@ -16,11 +16,12 @@ interface Props {
 	language: string[]
 	link: string
 	imagenes: string[]
+	description?: string
 }
 
-export const FlipCard: FC<Props> = ({ image, category, client, date, duration, language = [], link, imagenes }) => {
+export const FlipCard: FC<Props> = ({ image, category, client, date, duration, language = [], link, imagenes, description }) => {
 	const [visible, setVisible] = useState(false)
-
+	const [modalVisible, setModalVisible] = useState(false)
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [loaded, setLoaded] = useState(false)
 	const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -39,55 +40,12 @@ export const FlipCard: FC<Props> = ({ image, category, client, date, duration, l
 	}
 	return (
 		<>
-			<Modal open={visible} onClose={() => setVisible(!visible)} sx={{  display:"flex", justifyContent:"center", alignItems: "center"}}>
-				<Box sx={{width: "70vw", height: "85vh", position:""}} >
+			<Modal open={visible} onClose={() => setVisible(!visible)} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+				<Box sx={{ width: "70vw", height: "85vh", position: "" }}>
 					<SlideShow images={imagenes} />
 				</Box>
 			</Modal>
-			{/* <Modal
-				closeButton
-				open={visible}
-				blur
-				onClose={() => setVisible(false)}
-				style={{ width: "100vw", height: "60vh" }} 
-			>
-				<div className="navigation-wrapper" >
-					<div ref={sliderRef} className="keen-slider" >
-						{imagenes.map((img, idx) => (
-							<div key={idx} className="keen-slider__slide" >
-								<img
-									src={img}
-									key={idx}
-									style={{ width: "80vw", height: "80vh" }}
-									alt={img}
-								/>
-							</div>
-						))}
-					</div>
 
-					{loaded && instanceRef.current && (
-						<>
-							<Arrow
-								left
-								onClick={(e: any) =>
-									e.stopPropagation() || instanceRef.current?.prev()
-								}
-								disabled={currentSlide === 0}
-							/>
-
-							<Arrow
-								onClick={(e: any) =>
-									e.stopPropagation() || instanceRef.current?.next()
-								}
-								disabled={
-									currentSlide ===
-									instanceRef.current.track.details.slides.length - 1
-								}
-							/>
-						</>
-					)}
-				</div>
-			</Modal> */}
 			<Card className={styles.flipCard} role={"contentinfo"}>
 				<div className={styles.flipCardInner}>
 					<Image
@@ -119,7 +77,7 @@ export const FlipCard: FC<Props> = ({ image, category, client, date, duration, l
 								</li>
 								<li style={{ fontSize: "100%" }}>
 									<p>
-										<strong>Descripcion:</strong>: {duration}
+										<strong>Duracion:</strong>: {duration}
 									</p>
 								</li>
 
@@ -138,7 +96,7 @@ export const FlipCard: FC<Props> = ({ image, category, client, date, duration, l
 									</Grid.Container>
 								</Row>
 							</ul>
-							<Row justify="space-evenly" style={{ width: "100%", margin: "20px 0 20px 0", padding: "0" }}>
+							<Row justify="center" align="center" gap={3} style={{ width: "100%", margin: "20px 0 20px 0", padding: "0" }}>
 								{link != "" && (
 									<Link
 										isExternal
@@ -156,6 +114,28 @@ export const FlipCard: FC<Props> = ({ image, category, client, date, duration, l
 									>
 										Visitar
 									</Link>
+								)}
+								{description && (
+									<Tooltip title="Descripción">
+										<button
+											style={{
+												maxWidth: "40px",
+												width: "15vw",
+												minWidth: "20px",
+												height: "40px",
+												border: "2px solid #0072F5",
+												color: "#0072F5",
+												borderRadius: "10px",
+												backgroundColor: "white",
+												justifyContent: "center",
+												cursor: "pointer",
+												margin: "0 10px",
+											}}
+											onClick={() => setModalVisible(!modalVisible)}
+										>
+											<DescriptionIcon />
+										</button>
+									</Tooltip>
 								)}
 								<button
 									onClick={() => openPictures()}
@@ -175,6 +155,28 @@ export const FlipCard: FC<Props> = ({ image, category, client, date, duration, l
 									Fotos
 								</button>
 							</Row>
+							<Modal open={modalVisible} onClose={() => setModalVisible(!modalVisible)}>
+								<Box
+									sx={{
+										position: "absolute" as "absolute",
+										top: "50%",
+										left: "50%",
+										transform: "translate(-50%, -50%)",
+										width: 400,
+										bgcolor: "background.paper",
+										border: "2px solid #000",
+										boxShadow: 24,
+										p: 4,
+									}}
+								>
+									<Typography id="modal-modal-title" variant="h6" component="h2">
+										Acerca de este trabajo:
+									</Typography>
+									<Typography id="modal-modal-description" sx={{ mt: 2 }}>
+										{description}
+									</Typography>
+								</Box>
+							</Modal>
 						</Col>
 					</div>
 				</div>
