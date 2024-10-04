@@ -7,11 +7,11 @@ const Language = ({ defaultLanguage, languages }) => {
 
 	const handleLanguageChange = (language) => {
 		if (language === defaultLanguage) {
-			router.push(router.pathname, undefined, { locale: false });
+		  router.replace(router.pathname, router.asPath, { locale: false });
 		} else {
-			router.push(router.pathname, undefined, { locale: language });
+		  router.replace(router.pathname, router.asPath, { locale: language });
 		}
-	};
+	  };
 
 	return (
 		<div className="relative h-full w-full z-30">
