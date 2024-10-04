@@ -21,11 +21,7 @@ export const InputUI = ({ label, type, clearable = false, name, onCambio }) => {
 				type={type}
 				name={name}
 			></input>
-			<label
-				className={inputValue == "" ? styles.inputLbl : styles.inputLblText}
-			>
-				{label}
-			</label>
+			<label className={inputValue == "" ? styles.inputLbl : styles.inputLblText}>{label}</label>
 			{clearable && inputValue != "" && (
 				<CancelRoundedIcon
 					sx={{ color: "#414345" }}

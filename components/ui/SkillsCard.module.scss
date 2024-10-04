@@ -29,6 +29,7 @@
 
 .image {
 	animation: showUpandDown 3s linear infinite;
+	height: 100px;
 	@media #{$mobileXs} {
 		max-height: "45px";
 	}

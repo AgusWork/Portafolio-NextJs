@@ -6,9 +6,11 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { useInView } from "react-intersection-observer";
 import PacmanLoader from "react-spinners/PacmanLoader";
+import { useRouter } from "next/router";
 
 export const Projects = (props: { props: {} }) => {
 	const { ref, inView } = useInView();
+	const { locale } = useRouter();
 	const data = props.props;
 
 	if (!data)
@@ -26,50 +28,30 @@ export const Projects = (props: { props: {} }) => {
 	const newData: any = data;
 
 	return (
-		<Row className={styles.WorkContainer} id="Exp. Profesional">
+		<Row className={styles.WorkContainer} id={locale === "en" ? "Professional Experience" : "Exp. Profesional"}>
 			<Col css={{ padding: "0" }}>
 				<Row justify="center">
-					<AnimationOnScroll
-						animateIn="animate__fadeIn"
-						animateOnce={true}
-						duration={2}
-					>
-						<Text
-							ref={ref}
-							h2
-							size={50}
-							className={`${styles.border}`}
-						>
-							Experiencia Profesional
+					<AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} duration={2}>
+						<Text ref={ref} h2 size={50} className={`${styles.border}`}>
+							{locale === "en" ? "Professional Experience" : "Experiencia Profesional"}
 						</Text>
 					</AnimationOnScroll>
 				</Row>
 				<Row justify="center">
 					<Grid.Container gap={4} css={{ width: "100%" }} justify="center">
-						{newData.posts.map((d, idx) => (
-							<Grid
-								xs={12}
-								sm={12}
-								md={12}
-								lg={6}
-								xl={4}
-								key={idx}
-								justify="center"
-							>
-								<AnimationOnScroll
-									animateIn="animate__fadeIn"
-									animateOnce={true}
-									duration={2}
-								>
+						{newData.practice.map((d, idx) => (
+							<Grid xs={12} sm={12} md={12} lg={6} xl={4} key={idx} justify="center">
+								<AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} duration={2}>
 									<FlipCard
 										image={d.image}
 										category={d.category}
 										client={d.client}
 										date={d.date}
 										link={d.link}
-										duration={d.duration}
+										duration={`${d.duration} ${locale === "en" ? (d.duration > 1 ? "weeks" : "week") : (d.duration > 1 ? "semanas" : "semana")}`}
 										language={d.language}
 										imagenes={d.imagenes}
+										description={locale === "en" ? d.descriptionEn : d.descriptionEsp}
 									/>
 								</AnimationOnScroll>
 							</Grid>

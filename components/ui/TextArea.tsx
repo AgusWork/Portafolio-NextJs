@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import styles from "./UiStyles.module.scss";
 import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 
-export const TextArea = ({
-	label,
-	rows,
-	clearable = false,
-	name,
-	onCambio,
-}) => {
+export const TextArea = ({ label, rows, clearable = false, name, onCambio }) => {
 	const [inputValue, setInputValue] = useState("");
 
 	const handleChange = (event) => {
@@ -27,11 +21,7 @@ export const TextArea = ({
 				rows={rows}
 				name={name}
 			></textarea>
-			<label
-				className={inputValue == "" ? styles.inputLbl : styles.inputLblText}
-			>
-				{label}
-			</label>
+			<label className={inputValue == "" ? styles.inputLbl : styles.inputLblText}>{label}</label>
 			{clearable && inputValue != "" && (
 				<CancelRoundedIcon
 					sx={{ color: "#414345" }}

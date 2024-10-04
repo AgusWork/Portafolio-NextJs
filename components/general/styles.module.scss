@@ -2,19 +2,44 @@
 
 .border {
 	display: inline-block;
-	border-bottom: solid 3px #51517e;
+	position: relative;
 	color: #ffffff;
 	font-size: 60px;
-	text-shadow: "5px 5px black";
+	font-weight: bold;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
 	margin-bottom: 50px;
+	letter-spacing: 1px; 
+	transition: all 0.3s ease-in-out;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 3px;
+		bottom: -10px;
+		left: 0;
+		background-color: #51517e;
+		transition: width 0.4s ease-in-out;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+	&:hover {
+		color: #f0f0f0;
+		text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8); 
+		transform: translateY(-5px); 
+	}
+
 	@media #{$mobile} {
-		font-size: 35px;
+		font-size: 40px;
 		text-align: center;
 	}
-	@media #{$mobileXs}{
+
+	@media #{$mobileXs} {
 		margin-top: 10px;
-		font-size: 30px;
-		text-align: center; 
+		font-size: 35px;
+		text-align: center;
 	}
 }
 

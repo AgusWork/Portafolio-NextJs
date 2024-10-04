@@ -1,33 +1,48 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme, Navbar, Row, Link } from "@nextui-org/react";
 import styles from "./UiStyles.module.scss";
 import Scrollspy from "react-scrollspy";
-const links = ["Exp. Laboral","Exp. Profesional" , "Sobre Mi", "Habilidades", "Habilidades blandas", "Contacto"];
+import Language from "./Lenguaje";
+import { useRouter } from "next/router";
+
+const linksEs = [
+	"Exp. Laboral",
+	"Exp. Profesional",
+	"Sobre Mi",
+	"Habilidades",
+	"Habilidades blandas",
+	"Contacto",
+];
+
+const linksEn = [
+	"Work Experience",
+	"Professional Experience",
+	"About Me",
+	"Skills",
+	"Soft Skills",
+	"Contact",
+];
 
 export const NavBar = () => {
 	const { theme } = useTheme();
 	const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
-	const [activeMenu, setActiveMenu] = useState();
+	const [activeMenu, setActiveMenu] = useState<number | undefined>(undefined);
+	const { locale } = useRouter();
+	const displayLinks = locale === "en" ? linksEn : linksEs;
 
 	const handleClick = (link: string) => {
 		const element = document.getElementById(link);
 		if (element) {
-			// 👇 Will scroll smoothly to the top of the next section
 			element.scrollIntoView({ behavior: "smooth" });
 		}
 	};
-	// Required
-	// this is how we enable again scroll after closing Navbar.Collapse
-	// when we dont click the Navbar.Toggle button
+
 	useEffect(() => {
-		document.body.style.overflow = null;
+		document.body.style.overflow = "";
 		isSideMenuOpen && (document.body.style.overflow = "hidden");
 	}, [isSideMenuOpen]);
 
-	// Flag is just to know if we are navigating from Navbar.Collapse or CollapseItem links
-	// any other place should not toggle the state of Navbar.Collapse
-	// pass the flag={true} to toggle side menu
-	const HandleSideMenu = (flag = false, index = undefined) => {
+	const HandleSideMenu = (flag = false, index?: number) => {
 		setActiveMenu(index);
 		flag && setIsSideMenuOpen(!isSideMenuOpen);
 		isSideMenuOpen && setIsSideMenuOpen(false);
@@ -42,23 +57,10 @@ export const NavBar = () => {
 			variant="sticky"
 			isCompact
 		>
-			<Navbar.Brand style={{ borderRadius:"100%"}}
->
-				<Navbar.Toggle
-					aria-label="toggle navigation"
-					showIn="xs"
-					isSelected={isSideMenuOpen}
-					onChange={() => HandleSideMenu(true, activeMenu)}
-				/>
-			</Navbar.Brand>
-			<Row justify="center" align="center">
+			<Row justify="center" align="center" css={{ width: "100%" }}>
 				<Navbar.Content hideIn="xs">
-					{links.map((link, idx) => (
-						<Scrollspy
-							items={[link]}
-							currentClassName={styles.active}
-							key={idx}
-						>
+					{displayLinks.map((link, idx) => (
+						<Scrollspy items={[link]} currentClassName={styles.active} key={idx}>
 							<Navbar.Link
 								key={idx}
 								onClick={() => handleClick(link)}
@@ -69,23 +71,52 @@ export const NavBar = () => {
 						</Scrollspy>
 					))}
 				</Navbar.Content>
-				<Navbar.Collapse isOpen={isSideMenuOpen} css={{position:"absolute", left:"0px", margin:"0", padding:"0px", marginLeft:"-42px", top:"26px", width:"100vw"}}> 
-					<div style={{marginTop: "-17px", marginLeft: "-12px"}}>
-						{links.map((link, idx) => (
-						<Navbar.CollapseItem key={idx} disableAnimation={true} className={styles.navbarHoverLink}>
+			</Row>
+
+			<Navbar.Collapse
+				isOpen={isSideMenuOpen}
+				css={{
+					position: "absolute",
+					left: "0px",
+					margin: "0",
+					padding: "0px",
+					marginLeft: "-42px",
+					top: "26px",
+					width: "100vw",
+				}}
+			>
+				<div style={{ marginTop: "-17px", marginLeft: "-12px" }}>
+					{displayLinks.map((link, idx) => (
+						<Navbar.CollapseItem
+							key={idx}
+							disableAnimation={true}
+							className={styles.navbarHoverLink}
+						>
 							<Link
 								key={idx}
-								onClick={() => {handleClick(link), HandleSideMenu(false, idx)}}
+								onClick={() => {
+									handleClick(link);
+									HandleSideMenu(false, idx);
+								}}
 								className={styles.navbarLink}
 							>
 								{link}
 							</Link>
 						</Navbar.CollapseItem>
 					))}
-					</div>
-					
-				</Navbar.Collapse>
-			</Row>
+				</div>
+			</Navbar.Collapse>
+
+			<div
+				style={{
+					position: "absolute",
+					top: "0",
+					right: "20px",
+					zIndex: 1000,
+				}}
+			>
+				<Language defaultLanguage={"es"} languages={["es", "en"]} />
+			</div>
 		</Navbar>
 	);
 };
